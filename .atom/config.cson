@@ -1,0 +1,15 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    fontSize: 20
+  "exception-reporting":
+    userId: "9df333e2-8940-456c-9582-04672f49b1b8"
+  welcome:
+    showOnStartup: false

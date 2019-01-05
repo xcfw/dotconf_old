@@ -1,0 +1,27 @@
+sw_volume: 100
+audio_device_state:1:DX90
+state: pause
+current: 4
+time: 0.000000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/01 - All Res.flac
+1:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/02 - Unspeakable World.flac
+2:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/03 - Branches Break.flac
+3:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/13 - All Res (Dabrye Remix).flac
+4:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/04 - Weird Cat.flac
+5:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/05 - Quiet Mind.flac
+6:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/06 - Smarra.flac
+7:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/07 - Initiate.flac
+8:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/08 - GBFISYSIH.flac
+9:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/09 - Surrender To Mountain.flac
+10:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/10 - Protest.flac
+11:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/11 - Unspeakable World (Matthew Herbert's Onc Workout).flac
+12:000_coldark/GoGo Penguin - Man Made Object (2016) [FLAC 24]/12 - Initiate (Stray  Remix).flac
+playlist_end

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+spacefm -d &
+clipit &
+xmodmap /home/xcf/.Xmodmap &
+
+

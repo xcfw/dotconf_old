@@ -1,0 +1,117 @@
+! urxvt
+
+!URxvt*geometry:                53x20
+!URxvt*font:  xft:adobe-source-code-pro:pixelsize=7
+URxvt*geometry:         112x22  
+URxvt.letterSpace: -5
+URxvt*font:  xft:adobe-source-code-pro:pixelsize=8
+!URxvt*font:  xft:terminus:pixelsize=16
+URxvt*depth:                32
+URxvt*background:            [65]#000000
+URxvt*foreground:            [100]#66cccc
+URxvt*borderless: 1
+URxvt*scrollBar:            false
+URxvt*saveLines:  5000
+URxvt*termName:    rxvt-unicode
+URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.perl-ext: default,url-select
+
+
+!urxvt.matcher.pattern.0: \\b(?:(?:https?|ftp|news|file):\/\/|mailto:)[ab-zA-Z0-9\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [ab-zA-Z0-9\-\@;\/?:&=%\$_+!*\x27()~]
+URxvt*matcher.pattern.0: \\b(?:(?:https?|ftp):\/\/|mailto:)[\\w\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [\\w\-\@;\/?:&=%\$_+!*\x27()~]
+URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+!!! This one matches image URLs and open them in FEH
+URxvt*matcher.pattern.2:    \\bhttps?:\/\/[\\w-.]*\/[\\w./?&@#-]*.(jpg|jpeg|png)
+URxvt*matcher.launcher.2:    feh $0
+
+!!! Open youtubeliks in your own youtubescript
+URxvt*matcher.pattern.3:        \\bhttp:\/\/(www.youtube|youtube).com\/watch\\?v=([\\w-]*)
+URxvt*matcher.launcher.3:    /usr/local/bin/dutub $2
+
+!Pnevma1
+*color0: #2F2E2D
+*color8: #4A4845
+*color1: #A36666
+*color9: #D78787
+*color2: #8FA57E
+*color10: #A9BA9C
+*color3: #D7AF87
+*color11: #E4C9AF
+*color4: #7FA5BD
+*color12: #A1BDCE
+*color5: #C79EC4
+*color13: #D7BEDA
+*color6: #8ADBB4
+*color14: #B1E7DD
+*color7: #D0D0D0
+*color15: #EFEFEF
+
+!Pnevma2 - A heavy mod of the original.
+!*color0: #2F2E2D
+!*color8: #4A4845
+!*color1: #C37561
+!*color9: #D19485
+!*color2: #A0A57E
+!*color10: #B6B99D
+!*color3: #D1A375
+!*color11: #DEBC9C
+!*color4: #7985A3
+!*color12: #98A1B9
+!*color5: #AB716D
+!*color13: #BE918E
+!*color6: #98B9B1
+!*color14: #CBE6CB
+!*color7: #D0D0D0
+!*color15: #EFEFEF
+
+!!------------------------------------------------------------------------------
+!!! c o l o r -  s e t t i n g s
+!!
+!*background: #222222
+!*foreground: #777777
+!
+!! Default
+!! 0: black
+!*color0:  #222222
+!*color8:  #222222
+!! 1: red
+!*color1:  #9f6767
+!*color9:  #9f6767
+!! 2: green
+!*color2:  #92ac68
+!*color10: #92ac68
+!! 3: yellow
+!*color3:  #d0d293
+!*color11: #d0d293
+!! 4: blue
+!*color4:  #9aacc3
+!*color12: #9aacc3
+!! 5: magenta
+!*color5:  #bb77a4
+!*color13: #bb77a4
+!! 6: cyan !*color6:  #77bbb5
+!*color14: #77bbb5
+!! 7: white
+!*color7:  #777777
+!*color15: #777777
+!
+!!------------------------------------------------------------------------------
+!! u r x v t
+!
+!URxvt*scrollBar:        false
+!URxvt*scrollBar_right:        true
+!URxvt*scrollColor:        #000000
+!URxvt.font: xft:terminus:pixelsize=14
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+!
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

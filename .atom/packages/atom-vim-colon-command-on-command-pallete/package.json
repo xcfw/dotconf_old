@@ -1,0 +1,60 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+  "_id": "atom-vim-colon-command-on-command-pallete@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Zw1GkpwzyKfsjPI/+b9lwN6cNmw+6aSR43Nx0NvWGSPQIWgWNw4/UDCf0oJe6hdajco+rDBADUnT/Yp3y04faQ==",
+  "_location": "/atom-vim-colon-command-on-command-pallete",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+  "_shasum": "3451616a3598e89f2340530dc15677db682562aa",
+  "_spec": "https://www.atom.io/api/packages/atom-vim-colon-command-on-command-pallete/versions/0.2.0/tarball",
+  "_where": "/tmp/apm-install-dir-11903-22710-15qrnp3.skqp",
+  "activationCommands": {},
+  "bugs": {
+    "url": "https://github.com/takkjoga/atom-vim-colon-command-on-command-pallete/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Add colon command on Command Pallete to vim-mode",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/takkjoga/atom-vim-colon-command-on-command-pallete#readme",
+  "keywords": [
+    "vim",
+    "command"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-vim-colon-command-on-command-pallete",
+  "name": "atom-vim-colon-command-on-command-pallete",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takkjoga/atom-vim-colon-command-on-command-pallete.git"
+  },
+  "version": "0.2.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/atom-vim-colon-command-on-command-pallete.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
