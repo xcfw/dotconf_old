@@ -1,0 +1,55 @@
+!Molokai theme
+!*xterm*faceName:ohsnap:style=Regular:size=12
+!*xterm*faceName:Source Code Pro:style=Regular:size=9
+*xterm*background: #161616
+*xterm*foreground: #d0d0d0
+*xterm*cursorColor: #d0d0d0
+*xterm*color0: #161616
+*xterm*color1: #960050
+*xterm*color2: #66aa11
+*xterm*color3: #c47f2c
+*xterm*color4: #30309b
+*xterm*color5: #7e40a5
+*xterm*color6: #3579a8
+*xterm*color7: #9999aa
+*xterm*color8: #303030
+*xterm*color9: #ff0090
+*xterm*color10: #80ff00
+*xterm*color11: #ffba68
+*xterm*color12: #5f5fee
+*xterm*color13: #bb88dd
+*xterm*color14: #4eb4fa
+*xterm*color15: #d0d0d0
+
+!URxvt*font: xft:hack:size=9
+!URxvt*font: xft:ohsnap:size=9
+!URxvt*font: xft:adobe-source-code-pro:size=11
+URxvt*font: xft:Source Code Pro:size=11:antialias=true:hinting=true
+!URxvt*boldFont: xft:Source Code Pro:size=12:antialias=true:hinting=true
+!URxvt*italicFont: xft:Source Code Pro:style=Oblique:size=12:antialias=true:hinting=true
+!URxvt*boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=12:antialias=true:hinting=true
+URxvt*letterSpace: -2
+URxvt*background: #161616
+URxvt*foreground: #d0d0d0
+URxvt*cursorColor: #d0d0d0
+URxvt*color0: #161616
+URxvt*color1: #960050
+URxvt*color2: #66aa11
+URxvt*color3: #c47f2c
+URxvt*color4: #30309b
+URxvt*color5: #7e40a5
+URxvt*color6: #3579a8
+URxvt*color7: #9999aa
+URxvt*color8: #303030
+URxvt*color9: #ff0090
+URxvt*color10: #80ff00
+URxvt*color11: #ffba68
+URxvt*color12: #5f5fee
+URxvt*color13: #bb88dd
+URxvt*color14: #4eb4fa
+URxvt*color15: #d0d0d0
+URxvt*transparent: true
+URxvt*shading: 10
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+URxvt*scrollstyle: next
+URxvt*scrollBar: false

@@ -1,3 +1,7 @@
 [user]
-	name = ilmurat kerim
+	name = ik
 	email = ik@alem.kz
+[push]
+	default = matching
+[core]
+	editor = vim

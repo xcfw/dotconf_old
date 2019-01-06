@@ -1,0 +1,1 @@
+xcfw	viktorkho@irc.freenode.net	IRC	71f7416708d3a311a5376cf64e53b788f78d8a18	smp
