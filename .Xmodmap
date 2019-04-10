@@ -2,8 +2,8 @@ remove Lock = Caps_Lock
 !remove lock =  0x32 0x3e
 !add Mod3 = Alt_R
 !remove Control = ISO_Next_Group
-keysym ISO_Next_Group = BackSpace
-keysym BackSpace = ISO_Next_Group
+!keysym ISO_Next_Group = BackSpace
+!keysym BackSpace = ISO_Next_Group
 keycode 66 = BackSpace
 ! add Control = 
 !

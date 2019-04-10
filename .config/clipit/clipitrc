@@ -1,8 +1,8 @@
 [rc]
 use_copy=true
 use_primary=true
-synchronize=false
-automatic_paste=false
+synchronize=true
+automatic_paste=true
 show_indexes=true
 save_uris=true
 use_rmb_menu=true
