@@ -4,15 +4,15 @@
 'H
 	/home/xcf/
 	..
-1541413836
+1554743169
 'b
 	/home/xcf/bin/
 	..
-1541413836
+1554743169
 'h
 	/home/xcf/
 	..
-1541413836
+1554743169
 
 # Bookmarks:
 
@@ -23,663 +23,667 @@ v2
 ov
 m-1
 l2
-r11,2
+r2
 
 # Left window history (oldest to newest):
-d/home/xcf/Downloads
-	landing-master
-5
+d/home/xcf/.vim_runtime
+	autoload
+2
+d/home/xcf/.vim_runtime/autoload
+	pathogen.vim
+1
+d/home/xcf/.vim_runtime
+	autoload
+2
 d/home/xcf
-	Downloads
-18
-d/home
-	xcf
-2
-d/
-	usr
-21
-d/usr
-	..
-0
-d/
-	usr
-21
-d/usr
-	share
-8
-d/usr/share
-	lightdm-webkit
-42
-d/usr/share/lightdm-webkit
-	themes
-1
-d/usr/share/lightdm-webkit/themes
-	antergos
-2
-d/usr/share/lightdm-webkit/themes/antergos
-	..
-0
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	js
+	.vim_runtime
 4
-d/usr/share/lightdm-webkit/themes/archlinux/js
-	jquery-2.1.4.min.js
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux
-	js
+d/home/xcf/.vim_runtime
+	sources_forked
 4
-d/usr/share/lightdm-webkit/themes/archlinux/js
-	jquery-2.1.4.min.js
+d/home/xcf/.vim_runtime/sources_forked
+	typescript-vim
 3
-d/usr/share/lightdm-webkit/themes/archlinux
-	img
+d/home/xcf/.vim_runtime/sources_forked/typescript-vim
+	ftplugin
+4
+d/home/xcf/.vim_runtime/sources_forked
+	typescript-vim
 3
-d/usr/share/lightdm-webkit/themes/archlinux/img
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux
-	css
-1
-d/usr/share/lightdm-webkit/themes/archlinux/css
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux
+d/home/xcf/.vim_runtime/sources_forked/typescript-vim
 	README.md
 7
-d/usr/share/lightdm-webkit/themes
-	antergos
-2
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes/antergos/js
-	greeter.js
-1
-d/usr/share/lightdm-webkit/themes/antergos
-	img
+d/home/xcf/.vim_runtime/sources_forked
+	typescript-vim
+3
+d/home/xcf/.vim_runtime
+	sources_forked
 4
-d/usr/share/lightdm-webkit/themes/antergos/img
-	..
-0
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes/antergos/js
-	greeter.js
+d/home/xcf
+	.vim_runtime
+4
+d/home
+	xcf
 1
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	white_line_by_snipes2.jpg
-21
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
+d/home/xcf
+	src
+13
 d/home/xcf/src
-	alemgl
+	as-admin-dashboard
 1
-d/home/xcf/src/alemgl
-	log
-3
+d/home/xcf/src/as-admin-dashboard
+	src
+5
+d/home/xcf/src
+	as-admin-dashboard
+1
+d/home/xcf
+	src
+13
+d/home/xcf/src
+	awesome-copycats
+2
+d/home/xcf/src/awesome-copycats
+	rc.lua.template
+9
+d/home/xcf/src
+	awesome-copycats
+2
+d/home/xcf
+	.config
+4
+d/home/xcf/.config
+	awesome
+4
+d/home/xcf/.config/awesome
+	lain
+2
+d/home/xcf/.config
+	awesome
+4
+d/home/xcf/.config/awesome
+	lain
+2
+d/home/xcf/.config
+	awesome
+4
+d/home/xcf/.config/awesome
+	lain
+2
+d/home/xcf/.config
+	awesome
+4
+d/home/xcf/.config/awesome
+	.gitmodules
+5
+d/home/xcf/.config
+	awesome
+4
+d/home/xcf
+	src
+30
+d/home/xcf/src
+	awesome-copycats
+2
+d/home/xcf
+	Videos
+29
+d/home/xcf/Videos
+	..
+0
+d/home/xcf
+	Downloads
+24
+d/home/xcf/Downloads
+	arai_cv.pdf
+1
+d/home/xcf
+	Downloads
+24
+d/home/xcf/Downloads
+	arai_cv.pdf
+1
+d/home/xcf
+	Downloads
+24
 d/home/xcf/Downloads
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
+	Documents
+23
+d/home/xcf/Documents
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
+	Desktop
+22
+d/home/xcf/Desktop
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
+	Music
+25
+d/home/xcf/Music
 	..
 0
 d/home/xcf
-	src
-19
-d/home/xcf/src
-	FrontDreamLead-develop
-1
-d/home/xcf/src/FrontDreamLead-develop
-	dist
-1
-d/home/xcf/src/FrontDreamLead-develop/dist
+	Pictures
+26
+d/home/xcf/Pictures
 	..
 0
-d/home/xcf/src/FrontDreamLead-develop
-	e2e
-2
-d/home/xcf/src/FrontDreamLead-develop/e2e
+d/home/xcf
+	.ssh
+20
+d/home/xcf/.ssh
 	..
 0
-d/home/xcf/src/FrontDreamLead-develop
-	src
-3
-d/home/xcf/src/FrontDreamLead-develop/src
+d/home/xcf
+	.npm
+16
+d/home/xcf/.npm
 	..
 0
-d/home/xcf/src/FrontDreamLead-develop
-	src
-2
-d/home/xcf/src
-	FrontDreamLead
-1
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src/FrontDreamLead/node_modules
-	@angular
-2
-d/home/xcf/src/FrontDreamLead/node_modules/@angular
-	..
-0
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-19
-d/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
-	..
-0
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-18
-d/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
-	themes
-1
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-18
-d/home/xcf/src/FrontDreamLead
-	.git
-1
-d/home/xcf/src/FrontDreamLead/.git
-	branches
-1
-d/home/xcf/src/FrontDreamLead/.git/branches
-	..
-0
-d/home/xcf/src/FrontDreamLead/.git
-	hooks
-2
-d/home/xcf/src/FrontDreamLead/.git/hooks
-	..
-0
-d/home/xcf/src/FrontDreamLead/.git
-	hooks
-2
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src/FrontDreamLead/node_modules
-	ng2share
-42
-d/home/xcf/src/FrontDreamLead
-	package.json
-11
-d/home/xcf/src
-	FrontDreamLead
-1
-d/home/xcf/src/FrontDreamLead
-	src
-4
-d/home/xcf/src/FrontDreamLead/src
-	app
-1
-d/home/xcf/src/FrontDreamLead/src/app
-	app.component.ts
+d/home/xcf
+	.nv
 17
-d/home/xcf/src/FrontDreamLead/src
-	favicon.png
+d/home/xcf/.nv
+	..
+0
+d/home/xcf
+	.node-gyp
+15
+d/home/xcf/.node-gyp
+	..
+0
+d/home/xcf
+	.WebStorm2019.1
+2
+d/home/xcf/.WebStorm2019.1
+	config
+1
+d/home/xcf/.WebStorm2019.1/config
+	plugins
 5
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src
-	FrontDreamLead
+d/home/xcf/.WebStorm2019.1/config/plugins
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	plugins
+5
+d/home/xcf/.WebStorm2019.1/config/plugins
+	IdeaVim
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim/lib
+	..
+0
+d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins
+	Material Theme
+2
+d/home/xcf/.WebStorm2019.1/config
+	plugins
+5
+d/home/xcf/.WebStorm2019.1/config/plugins
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	options
+4
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf/.WebStorm2019.1/system
+	..
+0
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf
+	.PyCharmEdu2018.3
+1
+d/home/xcf/.PyCharmEdu2018.3
+	config
+1
+d/home/xcf/.PyCharmEdu2018.3/config
+	codestyles
+1
+d/home/xcf/.PyCharmEdu2018.3/config/codestyles
+	..
+0
+d/home/xcf/.PyCharmEdu2018.3/config
+	options
+2
+d/home/xcf/.PyCharmEdu2018.3/config/options
+	..
+0
+d/home/xcf/.PyCharmEdu2018.3/config
+	options
+2
+d/home/xcf/.PyCharmEdu2018.3
+	config
 1
 d/home/xcf
-	src
-19
-d/home/xcf/src
-	stm-frontend
-10
-d/home/xcf/src/stm-frontend
-	src
-4
-d/home/xcf/src/stm-frontend/src
-	router
-3
-d/home/xcf/src/stm-frontend/src/router
-	index.js
+	..
+0
+d/home
+	xcf
 1
-d/home/xcf/src/stm-frontend/src
-	components
+d/
+	mnt
+7
+d/mnt
+	..
+0
+d/
+	mnt
+7
+d/mnt
+	1
+1
+d/mnt/1
+	..
+0
+d/mnt
+	2
 2
-d/home/xcf/src/stm-frontend/src/components
-	LineChart.js
-5
-d/home/xcf/src/stm-frontend/src
-	components
+d/mnt/2
+	..
+0
+d/mnt
+	2
 2
-d/home/xcf/src/stm-frontend
-	src
-4
-d/home/xcf/src
-	stm-frontend
-10
-d/home/xcf
-	src
-19
+d/
+	srv
+13
+d/srv
+	..
+0
+d/
+	srv
+13
+d/srv
+	ftp
+1
+d/srv/ftp
+	..
+0
+d/srv
+	http
+2
+d/srv/http
+	..
+0
+d/srv
+	http
+2
+d/
+	srv
+13
 d
 
 # Right window history (oldest to newest):
-D/home/xcf/src/yay
-	..
-0
-D/home/xcf/src
-	yay
-2
-D/home/xcf
-	Downloads
-9
-D/home/xcf/Downloads
-	..
-0
-D/home/xcf
-	.local
-3
-D/home/xcf/.local
-	..
-0
-D/home/xcf
-	.vim
-8
-D/home/xcf/.vim
-	..
-0
-D/home/xcf
-	.vim
-8
-D/home
-	xcf
-2
-D/
-	usr
-20
-D/usr
-	share
-8
-D/usr/share
-	..
-0
-D/usr
-	local
-6
-D/usr/local
-	etc
-2
-D/usr/local/etc
-	..
-0
-D/usr/local
-	share
-8
-D/usr/local/share
-	man
-1
-D/usr/local/share/man
-	..
-0
-D/usr/local/share
-	man
-1
-D/usr/local
-	src
-9
-D/usr/local/src
-	..
-0
-D/usr/local
-	sbin
-7
-D/usr/local/sbin
-	..
-0
-D/usr/local
-	man
-6
-D/usr/local/man
-	..
-0
-D/usr/local
-	lib
-5
-D/usr/local/lib
-	..
-0
-D/usr/local
-	include
+D/home/xcf/.config
+	awesome
 4
-D/usr/local/include
-	..
-0
-D/usr/local
-	games
-3
-D/usr/local/games
-	..
-0
-D/usr/local
-	etc
-2
-D/usr/local/etc
-	..
-0
-D/usr/local
-	bin
-1
-D/usr/local/bin
-	..
-0
-D/usr/local
-	bin
-1
-D/usr/local/bin
-	protonvpn-cli
-1
-D/usr/local
-	bin
-1
-D/usr
-	local
-6
-D/
-	var
-21
-D/var
-	..
-0
-D/
-	home
-8
-D/home
-	xcf
-2
 D/home/xcf
 	.config
-2
+3
 D/home/xcf/.config
-	pulse
-6
-D/home/xcf
-	Downloads
-11
-D/home/xcf/Downloads
-	landing-master
-1
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads/landing-master/landing-master
-	..
-0
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads
-	landing-master
-3
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads/landing-master/landing-master
-	..
-0
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads
-	landing-master
-3
-D/home/xcf
-	src
-16
-D/home
-	xcf
-2
-D/home/xcf
-	data
-17
-D/home/xcf/data
-	win
+	awesome
 4
-D/home/xcf
-	src
-16
-D/home/xcf/src
-	landing
-3
-D/home/xcf/src/landing
-	wp-config.php
-12
-D/home/xcf/src
-	landing
-4
-D/home/xcf
-	src
-19
-D/home/xcf/src
-	alemgl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src
-	alemgl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	img
-2
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon/img
-	bg-mobile-fallback.jpg
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	js
-3
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon/js
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	vendor
-5
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	alem.gl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src
-	alemgl
-1
-D/home/xcf
-	Downloads
-16
-D/home/xcf/Downloads
-	tsetup.1.3.12.alpha
+D/home/xcf/.config/awesome
+	rc.lua
 7
-D/home/xcf/Downloads/tsetup.1.3.12.alpha
-	Telegreat
-1
-D/home/xcf/Downloads/tsetup.1.3.12.alpha/Telegreat
+D/home/xcf/.config
+	awesome
+4
+D/home/xcf
+	.config
+3
+D/home/xcf/.config
+	awesome
+4
+D/home/xcf/.config/awesome
+	themes
+3
+D/home/xcf/.config/awesome/themes
+	powerarrow
+6
+D/home/xcf/.config/awesome/themes/powerarrow
 	..
 0
-D/home/xcf/Downloads/tsetup.1.3.12.alpha
-	Telegreat
-1
-D/home/xcf/Downloads
-	..
-0
-D/home/xcf
-	Downloads
-16
-D/home/xcf/Downloads
-	photo_2016-12-02_02-29-37.jpg
-42
-D/home/xcf
-	Downloads
-16
-D/home
-	xcf
+D/home/xcf/.config/awesome/themes
+	multicolor
+5
+D/home/xcf/.config/awesome/themes/multicolor
+	theme.lua
 2
+D/home/xcf/.config/awesome/themes
+	multicolor
+5
+D/home/xcf/.config/awesome
+	themes
+3
+D/home/xcf/.config
+	awesome
+4
 D/home/xcf
 	src
-13
+26
 D/home/xcf/src
-	bkp
-2
-D/home/xcf/src/bkp
-	xdgautostart
-2
-D/home/xcf/src/bkp/xdgautostart
-	org.gnome.SettingsDaemon.A11ySettings.desktop
+	as-admin-dashboard
 1
-D/home/xcf/src/bkp
-	xdgautostart
-2
+D/home/xcf/src/as-admin-dashboard
+	src
+5
+D/home/xcf/src/as-admin-dashboard/src
+	app
+1
+D/home/xcf/src/as-admin-dashboard/src/app
+	home
+5
+D/home/xcf/src/as-admin-dashboard/src/app/home
+	home.component.ts
+3
+D/home/xcf/src/as-admin-dashboard/src/app
+	home
+5
+D/home/xcf/src/as-admin-dashboard/src
+	app
+1
+D/home/xcf/src/as-admin-dashboard
+	src
+5
 D/home/xcf/src
-	bkp
-10
+	dotconf
+4
+D/home/xcf/src/dotconf
+	.vim
+8
+D/home/xcf/src
+	dotconf
+4
+D/home/xcf/src/dotconf
+	.vim
+8
+D/home/xcf/src/dotconf/.vim
+	plugin
+2
+D/home/xcf/src/dotconf/.vim/plugin
+	..
+0
+D/home/xcf/src/dotconf/.vim
+	bundle
+1
+D/home/xcf/src/dotconf/.vim/bundle
+	..
+0
+D/home/xcf/src/dotconf/.vim
+	bundle
+1
+D/home/xcf/src/dotconf
+	.vim_runtime
+9
+D/home/xcf/src/dotconf/.vim_runtime
+	..
+0
+D/home/xcf/src/dotconf
+	.bash_profile
+17
+D/home/xcf/src
+	typescript-vim
+5
+D/home/xcf
+	src
+26
+D/home/xcf/src
+	dotconf
+4
+D/home/xcf/src/dotconf
+	.vim_runtime
+9
+D/home/xcf/src/dotconf/.vim_runtime
+	..
+0
+D/home/xcf/src/dotconf
+	.vim
+8
+D/home/xcf/src/dotconf/.vim
+	bundle
+1
+D/home/xcf/src/dotconf/.vim/bundle
+	Vundle.vim
+2
+D/home/xcf/src/dotconf/.vim/bundle/Vundle.vim
+	..
+0
+D/home/xcf/src/dotconf/.vim/bundle
+	command-t
+3
+D/home/xcf/src/dotconf/.vim/bundle/command-t
+	..
+0
+D/home/xcf/src/dotconf/.vim/bundle
+	sparkup
+4
+D/home/xcf/src/dotconf/.vim/bundle/sparkup
+	..
+0
+D/home/xcf/src/dotconf/.vim/bundle
+	typescript-vim
+5
+D/home/xcf/src/dotconf/.vim/bundle/typescript-vim
+	..
+0
+D/home/xcf/src/dotconf/.vim/bundle
+	vim-fugitive
+6
+D/home/xcf/src/dotconf/.vim/bundle/vim-fugitive
+	..
+0
+D/home/xcf/src/dotconf/.vim/bundle
+	vim-fugitive
+6
+D/home/xcf/src/dotconf/.vim
+	plugin
+2
+D/home/xcf/src/dotconf/.vim/plugin
+	..
+0
+D/home/xcf/src/dotconf/.vim
+	plugin
+2
+D/home/xcf/src/dotconf
+	.vim_runtime
+9
+D/home/xcf/src
+	dotconf
+4
+D/home/xcf
+	src
+26
+D/home/xcf/src
+	as-admin-dashboard
+1
+D/home/xcf/src/as-admin-dashboard
+	src
+5
+D/home/xcf/src/as-admin-dashboard/src
+	app
+1
+D/home/xcf/src/as-admin-dashboard/src/app
+	home
+5
+D/home/xcf/src/as-admin-dashboard/src/app/home
+	home.component.html
+2
+D/home/xcf/src/as-admin-dashboard/src/app
+	app.module.ts
+17
+D/home/xcf/src/as-admin-dashboard/src
+	browserslist
+4
+D/home/xcf/src/as-admin-dashboard
+	src
+5
+D/home/xcf/src/as-admin-dashboard/src
+	app
+1
+D/home/xcf/src/as-admin-dashboard/src/app
+	home
+5
+D/home/xcf/src/as-admin-dashboard/src/app/home
+	home.component.ts
+3
+D/home/xcf/src/as-admin-dashboard/src/app
+	home
+5
+D/home/xcf/src/as-admin-dashboard/src
+	app
+1
+D/home/xcf/src/as-admin-dashboard
+	src
+5
+D/home/xcf/src
+	dotconf
+4
+D/home/xcf/src/dotconf
+	.config
+1
+D/home/xcf/src/dotconf/.config
+	awesome2
+2
+D/home/xcf/src/dotconf/.config/awesome2
+	..
+0
+D/home/xcf/src/dotconf/.config
+	awesome
+1
+D/home/xcf/src/dotconf/.config/awesome
+	..
+0
+D/home/xcf/src/dotconf/.config
+	awesome2
+2
+D/home/xcf/src/dotconf/.config/awesome2
+	..
+0
+D/home/xcf/src/dotconf/.config
+	awesome
+1
+D/home/xcf/src/dotconf/.config/awesome
+	..
+0
+D/home/xcf/src/dotconf/.config
+	awesome
+1
+D/home/xcf/src/dotconf/.config/awesome
+	freedesktop
+1
+D/home/xcf/src/dotconf/.config
+	awesome2
+2
+D/home/xcf/src/dotconf/.config/awesome2
+	rc.lua
+7
+D/home/xcf/src/dotconf/.config
+	awesome
+1
+D/home/xcf/src/dotconf/.config/awesome
+	freedesktop
+1
+D/home/xcf/src/dotconf/.config
+	awesome
+1
+D/home/xcf/src/dotconf
+	..
+0
+D/home/xcf/src
+	typescript-vim
+5
+D/home/xcf/src/typescript-vim
+	..
+0
+D/home/xcf/src
+	dotconf
+4
+D/home/xcf/src/dotconf
+	.vim_runtime
+9
+D/home/xcf/src/dotconf/.vim_runtime
+	..
+0
+D/home/xcf/src/dotconf
+	.vim
+8
+D/home/xcf/src/dotconf/.vim
+	plugin
+2
+D/home/xcf/src/dotconf
+	.zshrc
+26
 D
 
 # Command line history (oldest to newest):
+:zq
 :q
-:!sudo vim 20-nvidia.conf
-:!sudo vim 40-libinput.conf
-:^t
-:!cat wp-config.php
-:!id
-:mkdir .mpdscribble
-:yank path
-:yank
-:chromium
-:cd /home/xcf/src/
-:sort date
-:sort
+:vimr
+:mkvifmrc
+:mkvimrc
+:help symlink
+:help
+:mousedit
+:!mousepad 
+:!mousepad rc.lua
+:!medit theme.lua
+:!mousepad theme.lua
+:!git clone https://github.com/leafgarland/typescript-vim.git
+:!git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+:!sh ~/.vim_runtime/install_awesome_vimrc.sh
+:touch my_configs.vim
+:!npm remove angular-moment
+:!npm i moment --save
 :edit
 
 # Search history (oldest to newest):
-/t
-/tele
+/confi
 /usr
-/ligh
-/solid
-/mul
-/ng2
+/sh
+/vifm
+/config
+/src
+/vimrc
+/.vim
 
 # Prompt history (oldest to newest):
-p.Xauthority
-p.Xdefaults
-p.angular-cli.json
-pnode_modules2
+pawesome___
+pawesome
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/xcf/.local/share/vifm/Trash/000_angular2-multiselect-dropdown
+""/home/xcf/.zshrc
 
 # Directory stack (oldest to newest):
 
 # Trash content:
-t/home/xcf/.local/share/vifm/Trash/000_~
-	/home/xcf/rtorrent/~
-t/home/xcf/.local/share/vifm/Trash/000_.rtorrent.rc
-	/home/xcf/rtorrent/.rtorrent.rc
-t/home/xcf/.local/share/vifm/Trash/000_dist
-	/home/xcf/src/FrontDreamLead-develop/dist
-t/home/xcf/.local/share/vifm/Trash/000_node_modules
-	/home/xcf/src/bkp/node_modules
-t/home/xcf/.local/share/vifm/Trash/000_angular2-multiselect-dropdown
-	/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
+t/home/xcf/.local/share/vifm/Trash/000_typescript-vim
+	/home/xcf/.vim/bundle/typescript-vim
+t/home/xcf/.local/share/vifm/Trash/000_.vim
+	/home/xcf/.vim
+t/home/xcf/.local/share/vifm/Trash/000_.vim_runtime
+	/home/xcf/.vim_runtime
+t/home/xcf/.local/share/vifm/Trash/000_.vimrc
+	/home/xcf/.vimrc
+t/home/xcf/.local/share/vifm/Trash/000_awesome
+	/home/xcf/.config/awesome
 
 # State:
 f
