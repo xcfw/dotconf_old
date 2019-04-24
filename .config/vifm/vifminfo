@@ -30,351 +30,309 @@ l2
 r-11,2
 
 # Left window history (oldest to newest):
-d/home/xcf/.oh-my-zsh/plugins
-	git-flow
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60
+	keymaps
+1
+d/home/xcf/src/qmk_firmware/keyboards
+	dz60
+16
+d/home/xcf/src/qmk_firmware
+	keyboards
+8
+d/home/xcf/src
+	qmk_firmware
 9
-d/home/xcf/.oh-my-zsh
-	plugins
-6
-d/home/xcf/.oh-my-zsh/plugins
-	git-flow
-9
-d/home/xcf/.oh-my-zsh
-	custom
-3
-d/home/xcf/.oh-my-zsh/custom
-	plugins
-1
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline2
-3
-d/home/xcf/.oh-my-zsh/custom/plugins/powerline2
-	powerline.zsh
-3
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline2
-3
-d/home/xcf/.oh-my-zsh/custom/plugins/powerline2
-	powerline.zsh
-3
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline2
-3
-d/home/xcf/.oh-my-zsh/custom
-	plugins
-1
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline3231
-3
-d/home/xcf/.oh-my-zsh/custom/plugins/powerline3231
-	__init__.pyc
+d/home/xcf
+	.WebStorm2019.1
 2
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline
+d/home/xcf/.WebStorm2019.1
+	..
+0
+d/home/xcf
+	.WebStorm2019.1
 2
-d/home/xcf/.oh-my-zsh/custom/plugins/powerline
-	powerline.zsh
-3
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline
-2
-d/home/xcf/.oh-my-zsh/custom
-	plugins
+d/home/xcf/.WebStorm2019.1
+	config
 1
-d/home/xcf/.oh-my-zsh
-	custom
+d/home/xcf/.WebStorm2019.1/config
+	options
+2
+d/home/xcf/.WebStorm2019.1/config/options
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	jba_config
+1
+d/home/xcf/.WebStorm2019.1/config/jba_config
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	plugins
 3
+d/home/xcf/.WebStorm2019.1/config/plugins
+	Material Theme
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme/lib
+	..
+0
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins
+	Material Theme
+1
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1/config/tasks
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	terminal
+5
+d/home/xcf/.WebStorm2019.1/config/terminal
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1/config/tasks
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf/.WebStorm2019.1/system
+	..
+0
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf
+	.cache
+3
+d/home/xcf/.cache
+	..
+0
+d/home/xcf
+	.cache
+3
+d/home/xcf/.cache
+	..
+0
 d/home/xcf
 	.config
-3
+4
 d/home/xcf/.config
-	fontconfig
-10
-d/home/xcf/.config/fontconfig
-	conf.d
+	autostart
+4
+d/home/xcf/.config/autostart
+	jetbrains-toolbox.desktop
 1
-d/home/xcf/.config/fontconfig/conf.d
-	10-powerline-symbols.conf
-1
-d/home/xcf/.config/fontconfig
-	conf.d
-1
-d/home/xcf/.config/fontconfig/conf.d
-	..
-0
-d/home/xcf/.config/fontconfig
-	fonts.conf
-2
 d/home/xcf/.config
-	fontconfig
-10
-d/home/xcf
-	.local
+	autostart
+4
+d/home/xcf/.config/autostart
+	jetbrains-toolbox.desktop
+1
+d/home/xcf/.config
+	catfish
 6
-d/home/xcf/.local
-	share
-3
-d/home/xcf/.local/share
-	applications
-2
-d/home/xcf/.local/share/applications
+d/home/xcf/.config/catfish
 	..
 0
-d/home/xcf/.local/share
-	vifm
+d/home/xcf/.config
+	chromium
 7
-d/home/xcf/.local/share/vifm
+d/home/xcf/.config/chromium
 	..
 0
-d/home/xcf/.local/share
-	vifm
-7
-d/home/xcf/.local
-	share
-3
-d/home/xcf
-	.oh-my-zsh
+d/home/xcf/.config
+	clipit
+8
+d/home/xcf/.config/clipit
+	clipitrc
+1
+d/home/xcf/.config
+	lxterminal
+10
+d/home/xcf/.config/lxterminal
+	..
+0
+d/home/xcf/.config
+	lxterminal
+10
+d/home/xcf/.config/lxterminal
+	lxterminal.conf
+1
+d/home/xcf/.config
+	manjaro
 11
-d/home/xcf/.oh-my-zsh
-	custom
-3
-d/home/xcf/.oh-my-zsh/custom
-	plugins
-1
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline
+d/home/xcf/.config/manjaro
+	manjaro-settings-manager.conf
 2
-d/home/xcf/.oh-my-zsh/custom/plugins/powerline
-	__init__.py
+d/home/xcf/.config
+	manjaro
+11
+d/home/xcf/.config/manjaro
+	manjaro-settings-manager-Notifier.conf
+1
+d/home/xcf/.config
+	mc
+12
+d/home/xcf/.config/mc
+	ini
 2
-d/home/xcf/.oh-my-zsh/custom/plugins
-	powerline
-2
-d/home/xcf/.oh-my-zsh/custom
-	plugins
-1
-d/home/xcf/.oh-my-zsh/custom/plugins
-	example
-1
-d/home/xcf/.oh-my-zsh/custom
-	plugins
-1
-d/home/xcf/.oh-my-zsh
-	plugins
-6
-d/home/xcf/.oh-my-zsh/plugins
-	ruby
-16
-d/home/xcf/.oh-my-zsh
-	plugins
-6
-d/home/xcf
-	Downloads
-14
-d/home/xcf/Downloads
-	qmk_toolbox-0.0.8
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
+d/home/xcf/.config
+	transmission
+10
+d/home/xcf/.config/transmission
 	..
 0
-d/home/xcf/Downloads
-	qmk_toolbox-0.0.8
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
-	common
-1
-d/home/xcf/Downloads/qmk_toolbox-0.0.8/common
-	mcu-list.txt
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
-	windows
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows
-	QMK Toolbox
-1
-d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows/QMK Toolbox
+d/home/xcf/.config
+	yay
+12
+d/home/xcf/.config/yay
 	..
 0
-d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows
-	QMK Toolbox
+d/home/xcf/.config
+	Kvantum
 1
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
-	windows
-3
-d/home/xcf/Downloads
-	qmk_toolbox-0.0.8
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
-	common
+d/home/xcf/.config/Kvantum
+	kvantum.kvconfig
 1
-d/home/xcf/Downloads/qmk_toolbox-0.0.8/common
-	mcu-list.txt
-3
-d/home/xcf/Downloads/qmk_toolbox-0.0.8
-	.gitattributes
-4
-d/home/xcf/Downloads
-	qmk_toolbox-0.0.9
-4
-d/home/xcf/Downloads/qmk_toolbox-0.0.9
-	linux
-2
-d/home/xcf/Downloads/qmk_toolbox-0.0.9/linux
-	..
-0
-d/home/xcf/Downloads/qmk_toolbox-0.0.9
-	linux
-2
-d/home/xcf/Downloads/qmk_toolbox-0.0.9/linux
-	qmk_toolbox
-5
-d/home/xcf/Downloads/qmk_toolbox-0.0.9
-	linux
-2
-d/home/xcf/Downloads
-	qmk_toolbox-0.0.9
-4
-d/home/xcf
-	Downloads
-14
-d/home/xcf/Downloads
-	qmkile (3).hex
-7
-d/home/xcf
-	Downloads
-7
-d/home
-	xcf
-1
-d/
-	home
-5
-d/home
-	xcf
-1
-d/home/xcf
-	.zshrc
-9
-d/home
-	xcf
-1
-d/
-	home
-5
-d/home
-	xcf
+d/home/xcf/.config
+	Kvantum
 1
 d/home/xcf
 	.oh-my-zsh
-5
+10
 d/home/xcf/.oh-my-zsh
 	oh-my-zsh.sh
 15
 d/home/xcf
-	src
+	.oh-my-zsh
+10
+d/home/xcf/.oh-my-zsh
+	oh-my-zsh.sh
+15
+d/home/xcf
+	.oh-my-zsh
+10
+d/home/xcf/.oh-my-zsh
+	cache
+2
+d/home/xcf
+	Applications
+5
+d/home/xcf/Applications
+	..
+0
+d/home/xcf
+	Applications
+5
+d/home/xcf/Applications
+	jetbrains-toolbox_00000000000000000000000000000000
+2
+d/home/xcf
+	Desktop
+6
+d/home/xcf/Desktop
+	..
+0
+d/home/xcf
+	Documents
+7
+d/home/xcf/Documents
+	..
+0
+d/home/xcf
+	Downloads
+8
+d/home/xcf/Downloads
+	..
+0
+d/home/xcf
+	Music
+9
+d/home/xcf/Music
+	..
+0
+d/home/xcf
+	Pictures
+10
+d/home/xcf/Pictures
+	..
+0
+d/home/xcf
+	Public
+11
+d/home/xcf/Public
+	..
+0
+d/home/xcf
+	Templates
 12
+d/home/xcf/Templates
+	..
+0
+d/home/xcf
+	Videos
+13
+d/home/xcf/Videos
+	..
+0
+d/home/xcf
+	anaconda3
+14
+d/home/xcf/anaconda3
+	..
+0
+d/home/xcf
+	data
+15
+d/home/xcf/data
+	..
+0
+d/home/xcf
+	qmk_firmware
+16
+d/home/xcf/qmk_firmware
+	..
+0
+d/home/xcf
+	src
+16
 d/home/xcf/src
 	qmk_firmware
 9
-d/home/xcf/src/qmk_firmware
-	dz60
-7
-d/home/xcf/src/qmk_firmware/dz60
-	..
-0
-d/home/xcf/src/qmk_firmware
-	drivers
-6
-d/home/xcf/src/qmk_firmware/drivers
-	..
-0
-d/home/xcf/src/qmk_firmware
-	keyboards
-8
-d/home/xcf/src/qmk_firmware/keyboards
-	dz60
+d/home/xcf
+	win
 16
-d/home/xcf/src/qmk_firmware/keyboards/dz60
-	keymaps
-1
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	edulpn
-17
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/edulpn
-	README.md
-1
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	mechmerlin
-34
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/mechmerlin
-	keymap.c
+d/home/xcf/win
+	..
+0
+d/home/xcf
+	.WebStorm2019.1
 2
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	60_ansi
+d/home
+	xcf
 1
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
-	readme.md
+d/home/xcf
+	.WebStorm2019.1
 2
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	60_ansi
-1
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
-	readme.md
-2
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	60_ansi
-1
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
-	readme.md
-2
-d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
-	60_ansi
-1
 d
 
 # Right window history (oldest to newest):
-D/mnt/data/@home/xcf/mega
-	stm
-11
-D/mnt/data/@home/xcf
-	.cache
-4
-D/mnt/data/@home
-	xcf
-2
-D/mnt/data
-	@home
-3
-D/mnt
-	win
-2
-D/mnt/win
-	Users
-11
-D/mnt/win/Users
-	admin
-7
-D/mnt/win/Users/admin
-	Documents
-20
-D/mnt/win/Users/admin/Documents
-	MEGAsync
-2
-D/mnt/win/Users/admin/Documents/MEGAsync
-	stm
-11
-D/mnt/win/Users/admin/Documents/MEGAsync/stm
-	newdes
-1
-D/mnt/win/Users/admin/Documents/MEGAsync/stm/newdes
-	drawing-2.svg.7z
-2
-D/mnt/win/Users/admin/Documents/MEGAsync/stm
-	present_main
-2
-D/mnt/win/Users/admin/Documents/MEGAsync/stm/present_main
-	Рейтинг регионов   Все проблемы.xcf
-15
 D/mnt/win/Users/admin/Documents/MEGAsync/stm
 	Рейтинг регионов   Все проблемы.xcf
 6
@@ -633,6 +591,48 @@ D/home/xcf/.config
 D/home/xcf/.config/awesome
 	rc.lua
 4
+D/home/xcf/.config
+	awesome
+9
+D/home/xcf
+	src
+2
+D/home/xcf/src
+	dotconf
+2
+D/home/xcf/src/dotconf
+	.config
+2
+D/home/xcf/src/dotconf/.config
+	mc
+7
+D/home/xcf/src/dotconf/.config/mc
+	..
+0
+D/home/xcf/src/dotconf/.config
+	config.h
+11
+D/home/xcf/src/dotconf
+	.oh-my-zsh
+7
+D/home/xcf/src/dotconf/.oh-my-zsh
+	..
+0
+D/home/xcf/src/dotconf
+	.oh-my-zsh
+1
+D/home/xcf/src/dotconf/.oh-my-zsh
+	log
+1
+D/home/xcf/src/dotconf
+	.vim
+4
+D/home/xcf/src/dotconf/.vim
+	..
+0
+D/home/xcf/src/dotconf
+	.zshrc
+5
 D
 
 # Command line history (oldest to newest):
@@ -652,6 +652,7 @@ D
 :!tar xvzf qmk_toolbox-0.0.9.tar.gz
 :./qmk-toolbox
 :sort
+:mkdir .oh-my-zsh
 
 # Search history (oldest to newest):
 /pow
@@ -672,6 +673,7 @@ D
 /pyth
 /power
 /.zshr
+/src
 
 # Prompt history (oldest to newest):
 p.config.h
@@ -686,7 +688,7 @@ pqmkile3.hex
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/xcf/Downloads/qmkile (3).hex
+""/home/xcf/.zshrc
 
 # Directory stack (oldest to newest):
 

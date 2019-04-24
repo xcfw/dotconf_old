@@ -8,7 +8,10 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="crunch"
+#ZSH_THEME="dogenpunk"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,10 +65,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-
-)
+plugins=(git npm virtualenv archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LC=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -86,9 +86,6 @@ export LC=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -96,8 +93,4 @@ export LC=en_US.UTF-8
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pacs="pacman -Ss"
-alias pgr="ps axf | grep"
-alias pacin="pacman -S"
-alias pacup="pacman -Syyu"
+alias ohmyzsh="mate ~/.oh-my-zsh"

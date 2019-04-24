@@ -14,7 +14,7 @@
 | yalocs  | yay -Qs                            | Search for packages in the local database                           |
 | yalst   | yay -Qe                            | List installed packages including from AUR (tagged as "local")      |
 | yamir   | yay -Syy                           | Force refresh of all package lists after updating mirrorlist        |
-| yaorph  | yay -Qtd                           | Remove orphans using yaourt                                         |
+| yaorph  | yay -Qtd                           | Remove orphans using yay                                            |
 | yare    | yay -R                             | Remove packages, keeping its settings and dependencies              |
 | yarem   | yay -Rns                           | Remove packages, including its settings and unneeded dependencies   |
 | yarep   | yay -Si                            | Display information about a package in the repositories             |
@@ -112,9 +112,9 @@
 | pacrep       | pacman -Si                              | Display information about a package in the repositories      |
 | pacreps      | pacman -Ss                              | Search for packages in the repositories                      |
 | pacrmorphans | sudo pacman -Rs $(pacman -Qtdq)         | Delete all orphaned packages                                 |
-| pacupd       | sudo pacman -Sy && sudo abs && sudo aur | Update and refresh the local package, ABS and AUR databases  |
-| pacupd       | sudo pacman -Sy && sudo abs             | Update and refresh the local package and ABS databases       |
-| pacupd       | sudo pacman -Sy && sudo aur             | Update and refresh the local package and AUR databases       |
+#| pacupd       | sudo pacman -Sy && sudo abs && sudo aur | Update and refresh the local package, ABS and AUR databases  |
+#| pacupd       | sudo pacman -Sy && sudo abs             | Update and refresh the local package and ABS databases       |
+#| pacupd       | sudo pacman -Sy && sudo aur             | Update and refresh the local package and AUR databases       |
 | pacupd       | sudo pacman -Sy                         | Update and refresh the local package database                |
 | pacupg       | sudo pacman -Syu                        | Sync with repositories before upgrading packages             |
 | upgrade      | sudo pacman -Syu                        | Sync with repositories before upgrading packages             |
