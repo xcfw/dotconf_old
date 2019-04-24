@@ -4,676 +4,697 @@
 'H
 	/home/xcf/
 	..
-1554743169
+1554977759
 'b
 	/home/xcf/bin/
 	..
-1554743169
+1554977907
 'h
 	/home/xcf/
 	..
-1554743169
+1554977907
+'n
+	/home/xcf/.oh-my-zsh/plugins
+	mosh
+1555417614
 
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
 m-1
 l2
-r2
+r-11,2
 
 # Left window history (oldest to newest):
-d/home/xcf/.vim_runtime
-	autoload
-2
-d/home/xcf/.vim_runtime/autoload
-	pathogen.vim
-1
-d/home/xcf/.vim_runtime
-	autoload
-2
-d/home/xcf
-	.vim_runtime
-4
-d/home/xcf/.vim_runtime
-	sources_forked
-4
-d/home/xcf/.vim_runtime/sources_forked
-	typescript-vim
-3
-d/home/xcf/.vim_runtime/sources_forked/typescript-vim
-	ftplugin
-4
-d/home/xcf/.vim_runtime/sources_forked
-	typescript-vim
-3
-d/home/xcf/.vim_runtime/sources_forked/typescript-vim
-	README.md
-7
-d/home/xcf/.vim_runtime/sources_forked
-	typescript-vim
-3
-d/home/xcf/.vim_runtime
-	sources_forked
-4
-d/home/xcf
-	.vim_runtime
-4
-d/home
-	xcf
-1
-d/home/xcf
-	src
-13
-d/home/xcf/src
-	as-admin-dashboard
-1
-d/home/xcf/src/as-admin-dashboard
-	src
-5
-d/home/xcf/src
-	as-admin-dashboard
-1
-d/home/xcf
-	src
-13
-d/home/xcf/src
-	awesome-copycats
-2
-d/home/xcf/src/awesome-copycats
-	rc.lua.template
+d/home/xcf/.oh-my-zsh/plugins
+	git-flow
 9
-d/home/xcf/src
-	awesome-copycats
+d/home/xcf/.oh-my-zsh
+	plugins
+6
+d/home/xcf/.oh-my-zsh/plugins
+	git-flow
+9
+d/home/xcf/.oh-my-zsh
+	custom
+3
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline2
+3
+d/home/xcf/.oh-my-zsh/custom/plugins/powerline2
+	powerline.zsh
+3
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline2
+3
+d/home/xcf/.oh-my-zsh/custom/plugins/powerline2
+	powerline.zsh
+3
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline2
+3
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline3231
+3
+d/home/xcf/.oh-my-zsh/custom/plugins/powerline3231
+	__init__.pyc
 2
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline
+2
+d/home/xcf/.oh-my-zsh/custom/plugins/powerline
+	powerline.zsh
+3
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline
+2
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh
+	custom
+3
 d/home/xcf
 	.config
-4
+3
 d/home/xcf/.config
-	awesome
-4
-d/home/xcf/.config/awesome
-	lain
-2
-d/home/xcf/.config
-	awesome
-4
-d/home/xcf/.config/awesome
-	lain
-2
-d/home/xcf/.config
-	awesome
-4
-d/home/xcf/.config/awesome
-	lain
-2
-d/home/xcf/.config
-	awesome
-4
-d/home/xcf/.config/awesome
-	.gitmodules
-5
-d/home/xcf/.config
-	awesome
-4
-d/home/xcf
-	src
-30
-d/home/xcf/src
-	awesome-copycats
-2
-d/home/xcf
-	Videos
-29
-d/home/xcf/Videos
-	..
-0
-d/home/xcf
-	Downloads
-24
-d/home/xcf/Downloads
-	arai_cv.pdf
+	fontconfig
+10
+d/home/xcf/.config/fontconfig
+	conf.d
 1
-d/home/xcf
-	Downloads
-24
-d/home/xcf/Downloads
-	arai_cv.pdf
+d/home/xcf/.config/fontconfig/conf.d
+	10-powerline-symbols.conf
 1
-d/home/xcf
-	Downloads
-24
-d/home/xcf/Downloads
+d/home/xcf/.config/fontconfig
+	conf.d
+1
+d/home/xcf/.config/fontconfig/conf.d
 	..
 0
+d/home/xcf/.config/fontconfig
+	fonts.conf
+2
+d/home/xcf/.config
+	fontconfig
+10
 d/home/xcf
-	Documents
-23
-d/home/xcf/Documents
+	.local
+6
+d/home/xcf/.local
+	share
+3
+d/home/xcf/.local/share
+	applications
+2
+d/home/xcf/.local/share/applications
 	..
 0
-d/home/xcf
-	Desktop
-22
-d/home/xcf/Desktop
+d/home/xcf/.local/share
+	vifm
+7
+d/home/xcf/.local/share/vifm
 	..
 0
+d/home/xcf/.local/share
+	vifm
+7
+d/home/xcf/.local
+	share
+3
 d/home/xcf
-	Music
-25
-d/home/xcf/Music
-	..
-0
-d/home/xcf
-	Pictures
-26
-d/home/xcf/Pictures
-	..
-0
-d/home/xcf
-	.ssh
-20
-d/home/xcf/.ssh
-	..
-0
-d/home/xcf
-	.npm
+	.oh-my-zsh
+11
+d/home/xcf/.oh-my-zsh
+	custom
+3
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline
+2
+d/home/xcf/.oh-my-zsh/custom/plugins/powerline
+	__init__.py
+2
+d/home/xcf/.oh-my-zsh/custom/plugins
+	powerline
+2
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh/custom/plugins
+	example
+1
+d/home/xcf/.oh-my-zsh/custom
+	plugins
+1
+d/home/xcf/.oh-my-zsh
+	plugins
+6
+d/home/xcf/.oh-my-zsh/plugins
+	ruby
 16
-d/home/xcf/.npm
-	..
-0
-d/home/xcf
-	.nv
-17
-d/home/xcf/.nv
-	..
-0
-d/home/xcf
-	.node-gyp
-15
-d/home/xcf/.node-gyp
-	..
-0
-d/home/xcf
-	.WebStorm2019.1
-2
-d/home/xcf/.WebStorm2019.1
-	config
-1
-d/home/xcf/.WebStorm2019.1/config
+d/home/xcf/.oh-my-zsh
 	plugins
-5
-d/home/xcf/.WebStorm2019.1/config/plugins
+6
+d/home/xcf
+	Downloads
+14
+d/home/xcf/Downloads
+	qmk_toolbox-0.0.8
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
 	..
 0
-d/home/xcf/.WebStorm2019.1/config
-	plugins
-5
-d/home/xcf/.WebStorm2019.1/config/plugins
-	IdeaVim
+d/home/xcf/Downloads
+	qmk_toolbox-0.0.8
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
+	common
 1
-d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim
-	lib
+d/home/xcf/Downloads/qmk_toolbox-0.0.8/common
+	mcu-list.txt
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
+	windows
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows
+	QMK Toolbox
 1
-d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim/lib
+d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows/QMK Toolbox
 	..
 0
-d/home/xcf/.WebStorm2019.1/config/plugins/IdeaVim
-	lib
+d/home/xcf/Downloads/qmk_toolbox-0.0.8/windows
+	QMK Toolbox
 1
-d/home/xcf/.WebStorm2019.1/config/plugins
-	Material Theme
-2
-d/home/xcf/.WebStorm2019.1/config
-	plugins
-5
-d/home/xcf/.WebStorm2019.1/config/plugins
-	..
-0
-d/home/xcf/.WebStorm2019.1/config
-	options
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
+	windows
+3
+d/home/xcf/Downloads
+	qmk_toolbox-0.0.8
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
+	common
+1
+d/home/xcf/Downloads/qmk_toolbox-0.0.8/common
+	mcu-list.txt
+3
+d/home/xcf/Downloads/qmk_toolbox-0.0.8
+	.gitattributes
 4
-d/home/xcf/.WebStorm2019.1
-	system
+d/home/xcf/Downloads
+	qmk_toolbox-0.0.9
+4
+d/home/xcf/Downloads/qmk_toolbox-0.0.9
+	linux
 2
-d/home/xcf/.WebStorm2019.1/system
+d/home/xcf/Downloads/qmk_toolbox-0.0.9/linux
 	..
 0
-d/home/xcf/.WebStorm2019.1
-	system
+d/home/xcf/Downloads/qmk_toolbox-0.0.9
+	linux
 2
+d/home/xcf/Downloads/qmk_toolbox-0.0.9/linux
+	qmk_toolbox
+5
+d/home/xcf/Downloads/qmk_toolbox-0.0.9
+	linux
+2
+d/home/xcf/Downloads
+	qmk_toolbox-0.0.9
+4
 d/home/xcf
-	.PyCharmEdu2018.3
-1
-d/home/xcf/.PyCharmEdu2018.3
-	config
-1
-d/home/xcf/.PyCharmEdu2018.3/config
-	codestyles
-1
-d/home/xcf/.PyCharmEdu2018.3/config/codestyles
-	..
-0
-d/home/xcf/.PyCharmEdu2018.3/config
-	options
-2
-d/home/xcf/.PyCharmEdu2018.3/config/options
-	..
-0
-d/home/xcf/.PyCharmEdu2018.3/config
-	options
-2
-d/home/xcf/.PyCharmEdu2018.3
-	config
-1
+	Downloads
+14
+d/home/xcf/Downloads
+	qmkile (3).hex
+7
 d/home/xcf
-	..
-0
+	Downloads
+7
 d/home
 	xcf
 1
 d/
-	mnt
-7
-d/mnt
-	..
-0
-d/
-	mnt
-7
-d/mnt
-	1
+	home
+5
+d/home
+	xcf
 1
-d/mnt/1
-	..
-0
-d/mnt
-	2
-2
-d/mnt/2
-	..
-0
-d/mnt
-	2
-2
-d/
-	srv
-13
-d/srv
-	..
-0
-d/
-	srv
-13
-d/srv
-	ftp
+d/home/xcf
+	.zshrc
+9
+d/home
+	xcf
 1
-d/srv/ftp
-	..
-0
-d/srv
-	http
-2
-d/srv/http
-	..
-0
-d/srv
-	http
-2
 d/
-	srv
-13
+	home
+5
+d/home
+	xcf
+1
+d/home/xcf
+	.oh-my-zsh
+5
+d/home/xcf/.oh-my-zsh
+	oh-my-zsh.sh
+15
+d/home/xcf
+	src
+12
+d/home/xcf/src
+	qmk_firmware
+9
+d/home/xcf/src/qmk_firmware
+	dz60
+7
+d/home/xcf/src/qmk_firmware/dz60
+	..
+0
+d/home/xcf/src/qmk_firmware
+	drivers
+6
+d/home/xcf/src/qmk_firmware/drivers
+	..
+0
+d/home/xcf/src/qmk_firmware
+	keyboards
+8
+d/home/xcf/src/qmk_firmware/keyboards
+	dz60
+16
+d/home/xcf/src/qmk_firmware/keyboards/dz60
+	keymaps
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	edulpn
+17
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/edulpn
+	README.md
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	mechmerlin
+34
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/mechmerlin
+	keymap.c
+2
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
+	readme.md
+2
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
+	readme.md
+2
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps/60_ansi
+	readme.md
+2
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
 d
 
 # Right window history (oldest to newest):
-D/home/xcf/.config
-	awesome
+D/mnt/data/@home/xcf/mega
+	stm
+11
+D/mnt/data/@home/xcf
+	.cache
 4
+D/mnt/data/@home
+	xcf
+2
+D/mnt/data
+	@home
+3
+D/mnt
+	win
+2
+D/mnt/win
+	Users
+11
+D/mnt/win/Users
+	admin
+7
+D/mnt/win/Users/admin
+	Documents
+20
+D/mnt/win/Users/admin/Documents
+	MEGAsync
+2
+D/mnt/win/Users/admin/Documents/MEGAsync
+	stm
+11
+D/mnt/win/Users/admin/Documents/MEGAsync/stm
+	newdes
+1
+D/mnt/win/Users/admin/Documents/MEGAsync/stm/newdes
+	drawing-2.svg.7z
+2
+D/mnt/win/Users/admin/Documents/MEGAsync/stm
+	present_main
+2
+D/mnt/win/Users/admin/Documents/MEGAsync/stm/present_main
+	Рейтинг регионов   Все проблемы.xcf
+15
+D/mnt/win/Users/admin/Documents/MEGAsync/stm
+	Рейтинг регионов   Все проблемы.xcf
+6
+D/mnt/win/Users/admin/Documents/MEGAsync
+	..
+0
+D/mnt/win/Users/admin/Documents
+	MEGAsync
+2
+D/mnt/win/Users/admin
+	Downloads
+21
+D/mnt/win/Users/admin/Downloads
+	..
+0
+D/mnt/win/Users/admin
+	Music
+25
+D/mnt/win/Users/admin/Music
+	..
+0
+D/mnt/win/Users/admin
+	Saved Games
+28
+D/mnt/win/Users/admin/Saved Games
+	..
+0
+D/mnt/win/Users/admin
+	Pictures
+25
+D/mnt/win/Users
+	All Users
+1
+D/mnt/win
+	Users
+11
+D/mnt
+	win
+2
+D/
+	usr
+19
+D/usr
+	share
+8
+D/usr/share
+	powerline
+40
+D/usr/share/powerline
+	bindings
+1
+D/usr/share/powerline/bindings
+	..
+0
+D/usr/share/powerline
+	bindings
+1
+D/usr/share
+	powerline
+40
+D/usr
+	bin
+1
+D/usr/bin
+	powerline
+35
+D/usr
+	bin
+1
+D/
+	usr
+19
+D/usr
+	lib
+3
+D/usr/lib
+	python3.7
+40
+D/usr/lib/python3.7
+	site-packages
+24
+D/usr/lib/python3.7/site-packages
+	powerline_status-2.7-py3.7.egg-info
+37
+D/usr/lib/python3.7/site-packages/powerline_status-2.7-py3.7.egg-info
+	requires.txt
+5
+D/usr/lib/python3.7/site-packages
+	powerline
+36
+D/usr/lib/python3.7/site-packages/powerline
+	lint
+7
+D/usr/lib/python3.7/site-packages/powerline/lint
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline
+	dist
+5
+D/usr/lib/python3.7/site-packages/powerline/dist
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline
+	dist
+5
+D/usr/lib/python3.7/site-packages/powerline/dist
+	systemd
+1
+D/usr/lib/python3.7/site-packages/powerline/dist/systemd
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline/dist
+	systemd
+1
+D/usr/lib/python3.7/site-packages/powerline
+	lib
+6
+D/usr/lib/python3.7/site-packages/powerline/lib
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline
+	lib
+6
+D/usr/lib/python3.7/site-packages/powerline/lib
+	debug.py
+6
+D/usr/lib/python3.7/site-packages/powerline
+	__init__.py
+13
+D/usr/lib/python3.7/site-packages
+	powerline
+16
+D/usr/lib/python3.7
+	site-packages
+16
+D/usr/lib
+	python3.7
+16
+D/usr
+	lib
+4
+D/
+	home
+4
+D/home
+	xcf
+1
+D/home/xcf
+	src
+16
+D/home/xcf/src
+	qmk
+8
+D/home/xcf/src/qmk
+	..
+0
+D/home/xcf/src
+	qmk
+8
+D/home/xcf/src/qmk
+	qmkile (1).hex
+1
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf/src/qmk_firmware
+	util
+12
+D/home/xcf/src/qmk_firmware/util
+	linux_install.sh
+19
+D/home/xcf/src/qmk_firmware
+	util
+12
+D/home/xcf/src/qmk_firmware/util
+	..
+0
+D/home/xcf/src/qmk_firmware
+	layouts
+7
+D/home/xcf/src/qmk_firmware/layouts
+	default
+2
+D/home/xcf/src/qmk_firmware/layouts/default
+	..
+0
+D/home/xcf/src/qmk_firmware/layouts
+	default
+2
+D/home/xcf/src/qmk_firmware
+	quantum
+9
+D/home/xcf/src/qmk_firmware/quantum
+	..
+0
+D/home/xcf/src/qmk_firmware
+	users
+12
+D/home/xcf/src/qmk_firmware/users
+	333fred
+1
+D/home/xcf/src/qmk_firmware
+	util
+13
+D/home/xcf/src/qmk_firmware/util
+	usb_detach
+1
+D/home/xcf/src/qmk_firmware/util/usb_detach
+	..
+0
+D/home/xcf/src/qmk_firmware/util
+	usb_detach
+1
+D/home/xcf/src/qmk_firmware
+	show_options.mk
+43
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf/src/qmk_firmware
+	show_options.mk
+43
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf
+	src
+16
+D/home
+	xcf
+1
+D/home/xcf
+	Downloads
+8
+D/home/xcf/Downloads
+	jetbrains-toolbox-1.14.5037
+3
+D/home/xcf/Downloads/jetbrains-toolbox-1.14.5037
+	..
+0
+D/home/xcf/Downloads
+	qmkilek9.json
+13
+D/home/xcf
+	Downloads
+3
+D/home
+	xcf
+1
 D/home/xcf
 	.config
-3
+4
 D/home/xcf/.config
 	awesome
-4
+9
 D/home/xcf/.config/awesome
 	rc.lua
-7
-D/home/xcf/.config
-	awesome
 4
-D/home/xcf
-	.config
-3
-D/home/xcf/.config
-	awesome
-4
-D/home/xcf/.config/awesome
-	themes
-3
-D/home/xcf/.config/awesome/themes
-	powerarrow
-6
-D/home/xcf/.config/awesome/themes/powerarrow
-	..
-0
-D/home/xcf/.config/awesome/themes
-	multicolor
-5
-D/home/xcf/.config/awesome/themes/multicolor
-	theme.lua
-2
-D/home/xcf/.config/awesome/themes
-	multicolor
-5
-D/home/xcf/.config/awesome
-	themes
-3
-D/home/xcf/.config
-	awesome
-4
-D/home/xcf
-	src
-26
-D/home/xcf/src
-	as-admin-dashboard
-1
-D/home/xcf/src/as-admin-dashboard
-	src
-5
-D/home/xcf/src/as-admin-dashboard/src
-	app
-1
-D/home/xcf/src/as-admin-dashboard/src/app
-	home
-5
-D/home/xcf/src/as-admin-dashboard/src/app/home
-	home.component.ts
-3
-D/home/xcf/src/as-admin-dashboard/src/app
-	home
-5
-D/home/xcf/src/as-admin-dashboard/src
-	app
-1
-D/home/xcf/src/as-admin-dashboard
-	src
-5
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf/src/dotconf
-	.vim
-8
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf/src/dotconf
-	.vim
-8
-D/home/xcf/src/dotconf/.vim
-	plugin
-2
-D/home/xcf/src/dotconf/.vim/plugin
-	..
-0
-D/home/xcf/src/dotconf/.vim
-	bundle
-1
-D/home/xcf/src/dotconf/.vim/bundle
-	..
-0
-D/home/xcf/src/dotconf/.vim
-	bundle
-1
-D/home/xcf/src/dotconf
-	.vim_runtime
-9
-D/home/xcf/src/dotconf/.vim_runtime
-	..
-0
-D/home/xcf/src/dotconf
-	.bash_profile
-17
-D/home/xcf/src
-	typescript-vim
-5
-D/home/xcf
-	src
-26
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf/src/dotconf
-	.vim_runtime
-9
-D/home/xcf/src/dotconf/.vim_runtime
-	..
-0
-D/home/xcf/src/dotconf
-	.vim
-8
-D/home/xcf/src/dotconf/.vim
-	bundle
-1
-D/home/xcf/src/dotconf/.vim/bundle
-	Vundle.vim
-2
-D/home/xcf/src/dotconf/.vim/bundle/Vundle.vim
-	..
-0
-D/home/xcf/src/dotconf/.vim/bundle
-	command-t
-3
-D/home/xcf/src/dotconf/.vim/bundle/command-t
-	..
-0
-D/home/xcf/src/dotconf/.vim/bundle
-	sparkup
-4
-D/home/xcf/src/dotconf/.vim/bundle/sparkup
-	..
-0
-D/home/xcf/src/dotconf/.vim/bundle
-	typescript-vim
-5
-D/home/xcf/src/dotconf/.vim/bundle/typescript-vim
-	..
-0
-D/home/xcf/src/dotconf/.vim/bundle
-	vim-fugitive
-6
-D/home/xcf/src/dotconf/.vim/bundle/vim-fugitive
-	..
-0
-D/home/xcf/src/dotconf/.vim/bundle
-	vim-fugitive
-6
-D/home/xcf/src/dotconf/.vim
-	plugin
-2
-D/home/xcf/src/dotconf/.vim/plugin
-	..
-0
-D/home/xcf/src/dotconf/.vim
-	plugin
-2
-D/home/xcf/src/dotconf
-	.vim_runtime
-9
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf
-	src
-26
-D/home/xcf/src
-	as-admin-dashboard
-1
-D/home/xcf/src/as-admin-dashboard
-	src
-5
-D/home/xcf/src/as-admin-dashboard/src
-	app
-1
-D/home/xcf/src/as-admin-dashboard/src/app
-	home
-5
-D/home/xcf/src/as-admin-dashboard/src/app/home
-	home.component.html
-2
-D/home/xcf/src/as-admin-dashboard/src/app
-	app.module.ts
-17
-D/home/xcf/src/as-admin-dashboard/src
-	browserslist
-4
-D/home/xcf/src/as-admin-dashboard
-	src
-5
-D/home/xcf/src/as-admin-dashboard/src
-	app
-1
-D/home/xcf/src/as-admin-dashboard/src/app
-	home
-5
-D/home/xcf/src/as-admin-dashboard/src/app/home
-	home.component.ts
-3
-D/home/xcf/src/as-admin-dashboard/src/app
-	home
-5
-D/home/xcf/src/as-admin-dashboard/src
-	app
-1
-D/home/xcf/src/as-admin-dashboard
-	src
-5
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf/src/dotconf
-	.config
-1
-D/home/xcf/src/dotconf/.config
-	awesome2
-2
-D/home/xcf/src/dotconf/.config/awesome2
-	..
-0
-D/home/xcf/src/dotconf/.config
-	awesome
-1
-D/home/xcf/src/dotconf/.config/awesome
-	..
-0
-D/home/xcf/src/dotconf/.config
-	awesome2
-2
-D/home/xcf/src/dotconf/.config/awesome2
-	..
-0
-D/home/xcf/src/dotconf/.config
-	awesome
-1
-D/home/xcf/src/dotconf/.config/awesome
-	..
-0
-D/home/xcf/src/dotconf/.config
-	awesome
-1
-D/home/xcf/src/dotconf/.config/awesome
-	freedesktop
-1
-D/home/xcf/src/dotconf/.config
-	awesome2
-2
-D/home/xcf/src/dotconf/.config/awesome2
-	rc.lua
-7
-D/home/xcf/src/dotconf/.config
-	awesome
-1
-D/home/xcf/src/dotconf/.config/awesome
-	freedesktop
-1
-D/home/xcf/src/dotconf/.config
-	awesome
-1
-D/home/xcf/src/dotconf
-	..
-0
-D/home/xcf/src
-	typescript-vim
-5
-D/home/xcf/src/typescript-vim
-	..
-0
-D/home/xcf/src
-	dotconf
-4
-D/home/xcf/src/dotconf
-	.vim_runtime
-9
-D/home/xcf/src/dotconf/.vim_runtime
-	..
-0
-D/home/xcf/src/dotconf
-	.vim
-8
-D/home/xcf/src/dotconf/.vim
-	plugin
-2
-D/home/xcf/src/dotconf
-	.zshrc
-26
 D
 
 # Command line history (oldest to newest):
-:zq
-:q
-:vimr
-:mkvifmrc
-:mkvimrc
-:help symlink
-:help
-:mousedit
-:!mousepad 
-:!mousepad rc.lua
-:!medit theme.lua
-:!mousepad theme.lua
-:!git clone https://github.com/leafgarland/typescript-vim.git
-:!git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-:!sh ~/.vim_runtime/install_awesome_vimrc.sh
-:touch my_configs.vim
-:!npm remove angular-moment
-:!npm i moment --save
-:edit
+:mkdir .st
+:touch config.h
+:w
+:!python __init__.py
+:!python config.py
+:!tar xvzf WebStorm-2019.1.tar.gz
+:!tar xvzf pycharm-professional-2019.1.1.tar.gz
+:!chown -R xcf:xcf .
+:!sudo chown -R xcf:xcf .
+:mkdir conf.d
+:!sudo chown -R xcf:xcf qmk/
+:!tar xvzf qmk_toolbox-0.0.8.tar.gz ../src/qmk/
+:!tar xvzf qmk_toolbox-0.0.8.tar.gz
+:!tar xvzf qmk_toolbox-0.0.9.tar.gz
+:./qmk-toolbox
+:sort
 
 # Search history (oldest to newest):
-/confi
-/usr
-/sh
-/vifm
-/config
-/src
-/vimrc
+/pow
 /.vim
+/zsh
+/conf
+/st
+/stt
+/npm
+/yay
+/python
+/pacman
+/pacm
+/pac
+/git
+/powe
+/sh
+/pyth
+/power
+/.zshr
 
 # Prompt history (oldest to newest):
-pawesome___
-pawesome
+p.config.h
+pconfig.h
+ppowerline.plugin.zsh
+ppowerline3231
+ppowerline
+pconf.d
+p10-powerline-symbols.conf
+pqmkile3.hex
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/xcf/.zshrc
+""/home/xcf/Downloads/qmkile (3).hex
 
 # Directory stack (oldest to newest):
 
 # Trash content:
+t/home/xcf/.local/share/vifm/Trash/000_awesome
+	/home/xcf/.config/awesome
+t/home/xcf/.local/share/vifm/Trash/000_clipit
+	/home/xcf/.config/clipit
 t/home/xcf/.local/share/vifm/Trash/000_typescript-vim
 	/home/xcf/.vim/bundle/typescript-vim
 t/home/xcf/.local/share/vifm/Trash/000_.vim
@@ -682,8 +703,12 @@ t/home/xcf/.local/share/vifm/Trash/000_.vim_runtime
 	/home/xcf/.vim_runtime
 t/home/xcf/.local/share/vifm/Trash/000_.vimrc
 	/home/xcf/.vimrc
-t/home/xcf/.local/share/vifm/Trash/000_awesome
-	/home/xcf/.config/awesome
+t/home/xcf/.local/share/vifm/Trash/000_.Xkbmap
+	/home/xcf/.Xkbmap
+t/home/xcf/.local/share/vifm/Trash/000_powerline
+	/home/xcf/.oh-my-zsh/custom/plugins/powerline
+t/home/xcf/.local/share/vifm/Trash/000_powerline.zsh
+	/home/xcf/.oh-my-zsh/custom/plugins/powerline.zsh
 
 # State:
 f

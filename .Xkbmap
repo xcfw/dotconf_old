@@ -1,1 +1,1 @@
--option shift:both_capslock
+-option us,ru,grp:ctrl_shift_toggle,caps:backspace,compose:ralt,terminate:ctrl_alt_bksp
