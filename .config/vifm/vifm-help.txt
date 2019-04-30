@@ -139,7 +139,9 @@ Basic Movement
 
        G      move to the last line in the file list.
 
-       gh     go up one directory.
+       gh     go  up one directory regardless of view representation (regular,
+	      ls-like).	 Also can be used to leave custom views including tree
+	      view.
 
        gl or Enter
 	      enter directory or launch a file.
@@ -170,6 +172,14 @@ Basic Movement
 	      tion.
 
        Space  switch file lists.
+
+       gt     switch to the next tab (wrapping around).
+
+       {n}gt  switch to the tab number {n} (wrapping around).
+
+       gT     switch to the previous tab (wrapping around).
+
+       {n}gT  switch to {n}-th previous tab.
 
 Movement with Count
        Most movement commands also accept a count,  12j	 would	move  down  12
@@ -618,9 +628,11 @@ Other Normal Mode Keys
 
        )      go to next group.	 See ( key description above.
 
-       {      similar to ( key, but always considers whether entry is file  or
-	      directory	 and  thus  speeds  up	navigation to closest previous
-	      entry of the opposite type.
+       {      speeds up navigation to closest previous entry of	 the  opposite
+	      type  by	moving to the first file backwards when cursor is on a
+	      directory and to the first directory backwards when cursor is on
+	      a	 file.	This is essentially a special case of ( that is locked
+	      on "dirs".
 
        }      same as {, but in forward direction.
 
@@ -1141,7 +1153,9 @@ Commands
 
 	   :[range]!
 	   :autocmd
+	   :cabbrev
 	   :cmap
+	   :cnoreabbrev
 	   :cnoremap
 	   :command
 	   :dmap
@@ -1816,6 +1830,13 @@ Commands
 	      stop  sourcing a script. Can only be used in a vifm script file.
 	      This is a quick way to skip the rest of the file.
 
+						:goto
+
+       :go[to]
+	      change directory if necessary and put specified path  under  the
+	      cursor.	The path should be existing non-root path.  Macros and
+	      environment variables are expanded.
+
 						:grep
 
        :[range]gr[ep][!] pattern
@@ -1874,6 +1895,7 @@ Commands
 	- underline
 	- reverse or inverse
 	- standout
+	- italic (on unsupported systems becomes reverse)
 	- none
 
        Available group-name values:
@@ -1881,6 +1903,8 @@ Commands
        for their content (e.g. regular files in views)
 	- AuxWin - color of auxiliary areas of windows
 	- Border - color of vertical parts of the border
+	- TabLine - tab line color
+	- TabLineSel - color of the tip of selected tab
 	- TopLineSel - top line color of the current pane
 	- TopLine - top line color of the other pane
 	- CmdLine - the command line/status bar color
@@ -1901,6 +1925,7 @@ Commands
 	- Fifo - color of fifo pipes
 	- CmpMismatch - color of mismatched files in  side-by-side  comparison
        by path
+	- User1..User9 - 9 colors which can be used via %* 'statusline' macro
 
        Available colors:
 	- -1 or default or none - default or transparent
@@ -2038,6 +2063,7 @@ Commands
 	 SuggestBox
 	 StatusLine
 	   WildMenu
+	   User1..User9
 	 Border
 	 CmdLine
 	   ErrorMsg
@@ -2056,6 +2082,8 @@ Commands
 		   OtherLine
 	 TopLine
 	   TopLineSel
+	 TabLine
+	   TabLineSel
 
        "none"  means  default terminal color for highlight groups at the first
        level of the hierarchy and transparency for all others.
@@ -2204,6 +2232,11 @@ Commands
        :marks list ...
 	      display the contents of the marks that are mentioned in list.
 
+						:media
+
+       :media only for *nix
+	      display media management menu.  See also 'mediaprg' option.
+
 						:messages
 
        :mes[sages]
@@ -2275,9 +2308,16 @@ Commands
 
        :pw[d] show the present working directory.
 
+						:qall
+
+       :qa[ll][!]
+	      exit  vifm (add ! to skip saving changes and checking for active
+	      backgrounded commands).
+
 						:quit
 
        :q[uit][!]
+	      if there is more than one tab, close the current one,  otherwise
 	      exit  vifm (add ! to skip saving changes and checking for active
 	      backgrounded commands).
 
@@ -2296,7 +2336,12 @@ Commands
 	      are  mentioned in list (for example "az to display "", "a and "z
 	      content).
 
-						:rename
+						:regular
+
+       :regular
+
+       switch to regular view leaving custom view.
+						       :rename
 
        :[range]rename[!]
 	      rename files using vi to edit  names.  !	means  go  recursively
@@ -2568,43 +2613,93 @@ Commands
 
 		- all - all of the above.
 
+						:tabclose
+
+       :tabc[lose]
+	      close  current  tab,  unless  it's  the only one open at current
+	      scope.
+
+						:tabmove
+
+       :tabm[ove] [N]
+	      without the argument or with `$` as the  argument,  current  tab
+	      becomes  the  last tab.  With the argument, current tab is moved
+	      after the tab with the specified number.	Argument of `0`	 moves
+	      current tab to the first position.
+
+						:tabname
+
+       :tabname [name]
+	      set,  update or reset (when no argument is provided) name of the
+	      current tab.
+
+						:tabnew
+
+       :tabnew [path]
+	      create new tab.  Accepts optional path for the new tab.	Macros
+	      and environment variables are expanded.
+
+						:tabnext
+
+       :tabn[ext]
+	      switch to the next tab (wrapping around).
+
+       :tabn[ext] {n}
+	      go to the tab number {n}.	 Tab numeration starts with 1.
+
+						:tabprevious
+
+       :tabp[revious]
+	      switch to the previous tab (wrapping around).
+
+       :tabp[revious] {n}
+	      go  to  the {n}-th previous tab.	Note that :tabnext handles its
+	      argument differently.
+
 						:touch
 
        :[line]touch file...
-	      create  files  at	 specified  paths.  Aborts on errors.  Doesn't
-	      update time of existing files.  The [line] can be used  to  pick
+	      create files at specified paths.	 Aborts	 on  errors.   Doesn't
+	      update  time  of existing files.	The [line] can be used to pick
 	      node in a tree-view.  Macros are expanded.
 
 						:tr
 
        :[range]tr/pattern/string/
 	      for each file in range transliterate the characters which appear
-	      in pattern to  the  corresponding	 character  in	string.	  When
-	      string  is shorter than pattern, it's padded with its last char-
+	      in  pattern  to  the  corresponding  character  in string.  When
+	      string is shorter than pattern, it's padded with its last	 char-
 	      acter.
 
 						:trashes
 
        :trashes
 	      lists all valid trash directories in a menu.  Only non-empty and
-	      writable	trash directories are shown.  This is exactly the list
+	      writable trash directories are shown.  This is exactly the  list
 	      of directories that are cleared when :empty command is executed.
 
        :trashes?
-	      same as :trashes, but also displays size of  each	 trash	direc-
+	      same  as	:trashes,  but also displays size of each trash direc-
 	      tory.
 
 						:tree
 
-       :tree  turn  pane into tree view with current directory as a root.  The
-	      tree view is implemented on top of a custom view, but  is	 auto-
-	      matically	 kept in sync with file system state and considers all
-	      the filters.  Thus the structure corresponds to what  one	 would
-	      see on visiting the directories manually.	 As a special case for
-	      trees built out of custom view file-system tracking  isn't  per-
-	      formed.	Tree structure is incompatible with alternative repre-
-	      sentations, so values of 'lsview' and 'millerview'  options  are
-	      ignored.
+       :tree  turn pane into tree view with current  directory	as  its	 root.
+	      The  tree	 view  is  implemented on top of a custom view, but is
+	      automatically kept in sync with file system state and  considers
+	      all  the	filters.   Thus	 the structure corresponds to what one
+	      would see on visiting the directories manually.	As  a  special
+	      case  for	 trees	built  out of custom view file-system tracking
+	      isn't performed.
+
+	      To leave tree view go up from its root or use gh at any level of
+	      the  tree.   Any command that changes directory will also do, in
+	      particular, `:cd ..`.
+
+	      Tree structure is incompatible with alternative representations,
+	      so values of 'lsview' and 'millerview' options are ignored.
+
+       :tree! toggle current view in and out of tree mode.
 
 						:undolist
 
@@ -2649,7 +2744,8 @@ Commands
 						:view
 
        :vie[w]
-	      toggle on and off the quick file view.
+	      toggle on and off the quick file	view.	See  also  'quickview'
+	      option.
 
        :vie[w]!
 	      turn on quick file view if it's off.
@@ -2658,7 +2754,7 @@ Commands
 
        :volumes
 	      only for MS-Windows
-	      display menu with volume list.  Hitting l (or Enter)  key	 opens
+	      display  menu  with volume list.	Hitting l (or Enter) key opens
 	      appropriate volume in the current pane.
 
 						:vsplit
@@ -2670,8 +2766,8 @@ Commands
 	      toggle window vertical splitting.
 
        :vs[plit] path
-	      split  the window vertically to show both file directories.  And
-	      changes other pane to path  (absolute  or	 relative  to  current
+	      split the window vertically to show both file directories.   And
+	      changes  other  pane  to	path  (absolute or relative to current
 	      directory of active pane).
 
 						:wincmd
@@ -2687,7 +2783,7 @@ Commands
 						:winrun
 
        :winrun type [command...]
-	      execute  command	for pane(s), which is determined by type argu-
+	      execute command for pane(s), which is determined by  type	 argu-
 	      ment:
 		- ^ - top-left pane
 		- $ - bottom-right pane
@@ -2702,13 +2798,22 @@ Commands
 
 						:wq
 
-       :wq[!] same as :quit, but ! only disables check	of  backgrounded  com-
+       :wq[!] same  as	:quit,	but ! only disables check of backgrounded com-
+	      mands.					       :wqall
+
+       :wqa[ll][!]
+	      same as :qall, but ! only disables check	of  backgrounded  com-
 	      mands.
+
+						:xall
+
+       :xa[ll][!]
+	      same as :qall.
 
 						:xit
 
        :x[it][!]
-	      will exit Vifm (add ! if you don't want to save changes).
+	      same as :quit.
 
 						:yank
 
@@ -2940,8 +3045,9 @@ Command macros
        %i     Completely ignore command output.
 
 
-       %pc    Marks  end  of  the main command and beginning of the clear com-
-	      mand, which is invoked on closing preview of a file.
+       %pc    Marks end of the main command and beginning of the clear command
+	      for graphical preview, which is invoked on closing preview of  a
+	      file.
 
        The following dimensions and coordinates are in characters:
 
@@ -2956,16 +3062,16 @@ Command macros
 
        Use %% if you need to put a percent sign in your command.
 
-       Note that %m, %M, %s, %S, %i, %u and %U macros are mutually  exclusive.
+       Note  that %m, %M, %s, %S, %i, %u and %U macros are mutually exclusive.
        Only the last one of them on the command will take effect.
 
-       You  can	 use  file  name modifiers after %c, %C, %f, %F, %b, %d and %D
+       You can use file name modifiers after %c, %C, %f, %F,  %b,  %d  and  %D
        macros.	Supported modifiers are:
 
 	 - :p		- full path
 
 	 - :u		  -   UNC   name   of	path   (e.g.   "\\server"   in
-	   "\\server\share"),  Windows only.  Expands to current computer name
+	   "\\server\share"), Windows only.  Expands to current computer  name
 	   for not UNC paths.
 
 	 - :~		- relative to the home directory
@@ -2980,35 +3086,35 @@ Command macros
 
 	 - :e		- extension of the file name (last one)
 
-	 - :s?pat?sub?	- substitute the first occurrence  of  pat  with  sub.
-	   You	can use any character for '?', but it must not occur in pat or
+	 - :s?pat?sub?	 -  substitute	the  first occurrence of pat with sub.
+	   You can use any character for '?', but it must not occur in pat  or
 	   sub.
 
 	 - :gs?pat?sub? - like :s, but substitutes all occurrences of pat with
 	   sub.
 
-       See  ':h	 filename-modifiers'  in  Vim's documentation for the detailed
+       See ':h filename-modifiers' in Vim's  documentation  for	 the  detailed
        description.
 
-       Using %x means expand corresponding macro escaping all characters  that
-       have  special meaning.  And %"x means using of double quotes and escape
-       only backslash and double quote characters, which  is  more  useful  on
+       Using  %x means expand corresponding macro escaping all characters that
+       have special meaning.  And %"x means using of double quotes and	escape
+       only  backslash	and  double  quote characters, which is more useful on
        Windows systems.
 
-       Position	 and  quantity (if there is any) of %m, %M, %S or %s macros in
+       Position and quantity (if there is any) of %m, %M, %S or %s  macros  in
        the command is unimportant.  All their occurrences are removed from the
        resulting command.
 
-       %c  and	%f  macros are expanded to file names only, when %C and %F are
+       %c and %f macros are expanded to file names only, when %C  and  %F  are
        expanded to full paths.	%f and %F follow this in %b too.
 
        :com move mv %f %D
-	      set the :move command to move all of the files selected  in  the
+	      set  the	:move command to move all of the files selected in the
 	      current directory to the other directory.
 
-       The  %a macro is replaced with any arguments given to an alias command.
+       The %a macro is replaced with any arguments given to an alias  command.
        All arguments are considered optional.
-	      :com lsl !!ls -l %a - set the lsl command to execute ls -l  with
+	      :com  lsl !!ls -l %a - set the lsl command to execute ls -l with
 	      or without an argument.
 
        :lsl<Enter>
@@ -3017,95 +3123,95 @@ Command macros
        :lsl filename<Enter>
 	      will list only the given filename.
 
-       The  macros  can also be used in directly executing commands.  ":!mv %f
+       The macros can also be used in directly executing commands.   ":!mv  %f
        %D" would move the current directory selected files to the other direc-
        tory.
 
-       Appending  &  to	 the  end of a command causes it to be executed in the
-       background.  Typically you want to run two kinds of  external  commands
+       Appending & to the end of a command causes it to	 be  executed  in  the
+       background.   Typically	you want to run two kinds of external commands
        in the background:
 
 	 - GUI applications that doesn't fork thus block vifm (:!sxiv %f &);
 
 	 - console tools that do not work with terminal (:!mv %f %D &).
 
-       You  don't  want to run terminal commands, which require terminal input
+       You don't want to run terminal commands, which require  terminal	 input
        or output something in background because they will mess up vifm's TUI.
        Anyway, if you did run such a command, you can use Ctrl-L key to update
        vifm's TUI.
 
-       Rewriting the example command with macros given above with  background-
+       Rewriting  the example command with macros given above with background-
        ing:
 
-       %m,  %M,	 %s,  %S,  %u and %U macros cannot be combined with background
+       %m, %M, %s, %S, %u and %U macros cannot	be  combined  with  background
        mark (" &") as it doesn't make much sense.
 
 Command backgrounding
-       Copy and move operation can take a lot of time to proceed.  That's  why
-       vifm  supports  backgrounding  of  this	two operations.	 To run :copy,
-       :move or :delete command in the background just add " &" at the end  of
+       Copy  and move operation can take a lot of time to proceed.  That's why
+       vifm supports backgrounding of this  two	 operations.   To  run	:copy,
+       :move  or :delete command in the background just add " &" at the end of
        a command.
 
-       For  each  background operation a new thread is created.	 Currently job
+       For each background operation a new thread is created.	Currently  job
        cannot be stopped or paused.
 
-       You can see if command is still	running	 in  the  :jobs	 menu.	 Back-
-       grounded	 commands  have	 progress  instead  of	process id at the line
+       You  can	 see  if  command  is  still running in the :jobs menu.	 Back-
+       grounded commands have progress instead	of  process  id	 at  the  line
        beginning.
 
        Background operations cannot be undone.
 
 Cancellation
        Note that cancellation works somewhat different on Windows platform due
-       to  different  mechanism	 of  break signal propagation.	One also might
+       to different mechanism of break signal  propagation.   One  also	 might
        need to use Ctrl-Break shortcut instead of Ctrl-C.
 
        There are two types of operations that can be cancelled:
 
 	 - file system operations;
 
-	 - mounting with FUSE (but not unmounting as  it  can  cause  loss  of
+	 - mounting  with  FUSE	 (but  not  unmounting as it can cause loss of
 	   data);
 
 	 - calls of external applications.
 
-       Note  that  vifm	 never terminates applications, it sends SIGINT signal
+       Note that vifm never terminates applications, it	 sends	SIGINT	signal
        and lets the application quit normally.
 
        When one of set of operations is cancelled (e.g. copying of 5th file of
-       10  files),  further  operations	 are cancelled too.  In this case undo
+       10 files), further operations are cancelled too.	  In  this  case  undo
        history will contain only actually performed operations.
 
-       Cancelled operations are indicated by "(cancelled)" suffix appended  to
+       Cancelled  operations are indicated by "(cancelled)" suffix appended to
        information message on statusbar.
 
        File system operations
 
-       Currently  the  following  commands  can	 be cancelled: :alink, :chmod,
+       Currently the following commands	 can  be  cancelled:  :alink,  :chmod,
        :chown,	:clone,	 :copy,	 :delete,  :mkdir,  :move,  :restore,  :rlink,
-       :touch.	 File putting (on p/P key) can be cancelled as well.  It's not
+       :touch.	File putting (on p/P key) can be cancelled as well.  It's  not
        hard to see that these are mainly long-running operations.
 
-       Cancelling commands when they are repeated for undo/redo operations  is
-       allowed	for  convenience,  but is not recommended as further undo/redo
-       operations might get blocked by	side-effects  of  partially  cancelled
+       Cancelling  commands when they are repeated for undo/redo operations is
+       allowed for convenience, but is not recommended	as  further  undo/redo
+       operations  might  get  blocked	by side-effects of partially cancelled
        group of operations.
 
        These commands can't be cancelled: :empty, :rename, :substitute, :tr.
 
        Mounting with FUSE
 
-       It's  not considered to be an error, so only notification on the status
+       It's not considered to be an error, so only notification on the	status
        bar is shown.
 
        External application calls
 
-       Each of this operations	can  be	 cancelled:  :apropos,	:find,	:grep,
+       Each  of	 this  operations  can	be  cancelled: :apropos, :find, :grep,
        :locate.
 
 Patterns
-       :highlight,  :filetype, :filextype, :fileviewer commands and 'classify'
-       option support globs, regular expressions and mime types to match  file
+       :highlight, :filetype, :filextype, :fileviewer commands and  'classify'
+       option  support globs, regular expressions and mime types to match file
        names or their paths.
 
        There are six possible ways to write a single pattern:
@@ -3124,17 +3230,17 @@ Patterns
 
        Flags of regular expressions mean the following:
 	 - "i" makes filter case insensitive;
-	 -  "I"	 makes	filter	case sensitive.	 They can be repeated multiple
-       times, but the later one takes precedence (e.g.	"iiiI"	is  equivalent
+	 - "I" makes filter case sensitive.  They  can	be  repeated  multiple
+       times,  but  the later one takes precedence (e.g.  "iiiI" is equivalent
        to "I" and "IiIi" is the same as "i").
 
-       To  combine  several patterns (AND them), make sure you're using one of
+       To combine several patterns (AND them), make sure you're using  one  of
        the first five forms and write patterns one after another, like this:
 	 <text/plain>{*.vifm}
        Mind that if you make a mistake the whole string will be treated as the
        sixth form.
 
-       :filetype,  :filextype  and :fileviewer commands accept comma-separated
+       :filetype, :filextype and :fileviewer commands  accept  comma-separated
        list of patterns instead of a single pattern, thus effectively handling
        OR operation on them:
 	 <text/plain>{*.vifm},<application/pdf>{*.pdf}
@@ -3142,18 +3248,18 @@ Patterns
        Five first forms can include leading exclamation mark that negates pat-
        tern matching.
 
-       The last form is implicitly refers to one of others.   :highlight  does
-       not  accept undecorated form, while :filetype, :filextype, :fileviewer,
+       The  last  form is implicitly refers to one of others.  :highlight does
+       not accept undecorated form, while :filetype, :filextype,  :fileviewer,
        :select, :unselect and 'classify' treat it as list of name globs.
 
-       Regular expression  patterns  are  case	insensitive  by	 default,  see
+       Regular	expression  patterns  are  case	 insensitive  by  default, see
        description of commands, which might override default behaviour.
 
-       "Globs"	section below provides short overview of globs and some impor-
+       "Globs" section below provides short overview of globs and some	impor-
        tant points that one needs to know about them.
 
-       Mime type matching is essentially globs matching applied to  mime  type
-       of  a  file instead of its name/path.  Note: mime types aren't detected
+       Mime  type  matching is essentially globs matching applied to mime type
+       of a file instead of its name/path.  Note: mime types  aren't  detected
        on Windows.
 
 Globs
@@ -3167,49 +3273,49 @@ Globs
 
 	 :filetype [*] less %c
 
-       matches only one file name, the one which contains only	asterisk  sym-
+       matches	only  one file name, the one which contains only asterisk sym-
        bol.
 
-       *  means	 any  number  of any characters (possibly an empty substring),
+       * means any number of any characters  (possibly	an  empty  substring),
        with one exception: asterisk at the pattern beginning doesn't match dot
        in the first position.  E.g.
 
 	 :fileviewer *.zip,*.jar zip -sf %c
 
-       associates  using  of  zip program to preview all files with zip or jar
+       associates using of zip program to preview all files with  zip  or  jar
        extensions as listing of their content.
 
        ? means any character at this position.	E.g.
 
 	 :fileviewer ?.out file %c
 
-       calls file tool for all files which has exactly	one  character	before
+       calls  file  tool  for all files which has exactly one character before
        their extension (e.g. a.out, b.out).
 
        Square brackets designate character class, which means that whole char-
-       acter class matches against any of characters listed in it.  For	 exam-
+       acter  class matches against any of characters listed in it.  For exam-
        ple
 
 	 :fileviewer *.[ch] highlight -O xterm256 -s dante --syntax c %c
 
-       makes  vifm  call highlight program to colorize source and header files
+       makes vifm call highlight program to colorize source and	 header	 files
        in C language for a 256-color terminal.	Equal command would be
 
 	 :fileviewer *.c,*.h highlight -O xterm256 -s dante --syntax c %c
 
 
-       Inside square brackets ^ or ! can be used for symbol class  negotiation
-       and  the - symbol to set a range. ^ and ! should appear right after the
+       Inside  square brackets ^ or ! can be used for symbol class negotiation
+       and the - symbol to set a range. ^ and ! should appear right after  the
        opening square bracket.	For example
 
 	 :filetype *.[!d]/ inspect_dir
 
-       associates inspect_dir as additional handler for all  directories  that
+       associates  inspect_dir	as additional handler for all directories that
        have one character extension unless it's "d" letter.  And
 
 	 :filetype [0-9].jpg sxiv
 
-       associates  sxiv picture viewer only for JPEG-files that contain single
+       associates sxiv picture viewer only for JPEG-files that contain	single
        digit in their name.
 
 :set options
@@ -3218,44 +3324,47 @@ Globs
 	      you can set ascending sorting order for left pane and descending
 	      order for right pane.
 
-	      In addition to being local to views, each such option  also  has
+	      In  addition  to being local to views, each such option also has
 	      two values:
 
-		- local	 to  current  directory (value associated with current
+		- local to current directory (value  associated	 with  current
 		  location);
 
-		- global to  current  directory	 (value	 associated  with  the
+		- global  to  current  directory  (value  associated  with the
 		  pane).
 
-	      The  idea	 is  that  current  directory  can be made a temporary
-	      exception to regular configuration of the view, until  directory
-	      change.	Use :setlocal for that.	 :setglobal changes view value
-	      not affecting settings until  directory  change.	 :set  applies
+	      The idea is that current	directory  can	be  made  a  temporary
+	      exception	 to regular configuration of the view, until directory
+	      change.  Use :setlocal for that.	:setglobal changes view	 value
+	      not  affecting  settings	until  directory change.  :set applies
 	      changes immediately to all values.
 
 
        'aproposprg'
 	      type: string
 	      default: "apropos %a"
-	      Specifies	 format	 for  an external command to be invoked by the
+	      Specifies format for an external command to be  invoked  by  the
 	      :apropos command.	 The format supports expanding of macros, spe-
-	      cific  for a particular *prg option, and %% sequence for insert-
-	      ing percent sign literally.  This option should include  the  %a
-	      macro  to	 specify placement of arguments passed to the :apropos
-	      command.	If the macro is not used, it will be implicitly	 added
+	      cific for a particular *prg option, and %% sequence for  insert-
+	      ing  percent  sign literally.  This option should include the %a
+	      macro to specify placement of arguments passed to	 the  :apropos
+	      command.	 If the macro is not used, it will be implicitly added
 	      after a space to the value of this option.
 
        'autochpos'
 	      type: boolean
 	      default: true
 	      When disabled vifm will set cursor to the first line in the view
-	      after :cd and :pushd commands instead of saved cursor  position.
-	      Disabling	 this will also make vifm clear information about cur-
+	      after  :cd and :pushd commands instead of saved cursor position.
+	      Disabling this will also make vifm clear information about  cur-
 	      sor position in the view history on :cd and :pushd commands (and
-	      on  startup if 'autochpos' is disabled in the vifmrc).  l key in
-	      the ":history ." and ":trashes" menus are treated like :cd  com-
-	      mand.   This  option  also affects marks so that navigating to a
+	      on startup if 'autochpos' is disabled in the vifmrc).  l key  in
+	      the  ":history ." and ":trashes" menus are treated like :cd com-
+	      mand.  This option also affects marks so that  navigating	 to  a
 	      mark doesn't restore cursor position.
+
+	      When this option is enabled, more fine grained control over cur-
+	      sor position is available via 'histcursor' option.
 
        'columns' 'co'
 	      type: integer
@@ -3527,14 +3636,29 @@ Globs
 	      Example of setup to use ack (http://beyondgrep.com/) instead  of
 	      grep:
 
-		set grepprg=ack\ -H\ -r\ %i\ %a\ %s
+		set grepprg='ack -H -r %i %a %s'
 
 	      or   The	 Silver	 Searcher  (https://github.com/ggreer/the_sil-
 	      ver_searcher):
 
-		set grepprg=ag\ --line-numbers\ %i\ %a\ %s
+		set grepprg='ag --line-numbers %i %a %s'
 
 
+
+       'histcursor'
+	      type: set
+	      default: startup,dirmark,direnter
+	      Defines situations when cursor  should  be  moved	 according  to
+	      directory history:
+	       - startup  - on loading file lists during startup
+	       -  dirmark   -  after navigating to a mark that doesn't specify
+	      file
+	       - direnter - on opening directory from a file list
+
+	      This option has no effect when 'autochpos' is disabled.
+
+	      Note that the list is not exhaustive and there are other	situa-
+	      tions when cursor is positioned automatically.
 
        'history' 'hi'
 	      type: integer
@@ -3548,29 +3672,29 @@ Globs
 
        'iec'  type: boolean
 	      default: false
-	      Use KiB, MiB, ... suffixes instead of K, M,  ...	when  printing
+	      Use  KiB,	 MiB,  ... suffixes instead of K, M, ... when printing
 	      size in human-friendly format.
 
        'ignorecase' 'ic'
 	      type: boolean
 	      default: false
-	      Ignore  case  in search patterns (:substitute, / and ? commands)
-	      and characters after f and F commands.  It doesn't  affect  file
+	      Ignore case in search patterns (:substitute, / and  ?  commands)
+	      and  characters  after f and F commands.	It doesn't affect file
 	      filtering.
 
        'incsearch' 'is'
 	      type: boolean
 	      default: false
 	      When this option is set, search and view update for local filter
-	      is be performed starting from initial cursor position each  time
+	      is  be performed starting from initial cursor position each time
 	      search pattern is changed.
 
        'iooptions'
 	      type: set
 	      default:
-	      Controls	details	 of file operations.  The following values are
+	      Controls details of file operations.  The following  values  are
 	      available:
-	       - fastfilecloning - perform fast file cloning  (copy-on-write),
+	       -  fastfilecloning - perform fast file cloning (copy-on-write),
 	      when available
 				   (available on Linux and btrfs file system).
 
@@ -3587,18 +3711,46 @@ Globs
        'locateprg'
 	      type: string
 	      default: "locate %a"
-	      Specifies	 format	 for  an external command to be invoked by the
-	      :locate command.	The format supports expanding of macros,  spe-
-	      cific  for a particular *prg option, and %% sequence for insert-
-	      ing percent sign literally.  This option should include  the  %a
-	      macro  to	 specify  placement of arguments passed to the :locate
-	      command.	If the macro is not used, it will be implicitly	 added
+	      Specifies format for an external command to be  invoked  by  the
+	      :locate  command.	 The format supports expanding of macros, spe-
+	      cific for a particular *prg option, and %% sequence for  insert-
+	      ing  percent  sign literally.  This option should include the %a
+	      macro to specify placement of arguments passed  to  the  :locate
+	      command.	 If the macro is not used, it will be implicitly added
 	      after a space to the value of this option.
 
-	      Optional	%u  or %U macro could be used (if both specified %U is
-	      chosen) to force redirection to custom or unsorted  custom  view
+	      Optional %u or %U macro could be used (if both specified	%U  is
+	      chosen)  to  force redirection to custom or unsorted custom view
 	      respectively.
 
+       'mediaprg'
+	      type: string
+	      default: path to bundled script that supports udevil and udisks
+	      {only for *nix}
+	      Specifies command to be used to manage media devices.   Used  by
+	      :media command.
+
+	      The command can be passed the following parameters:
+	       - list		-- list media
+	       - mount {device} -- mount a device
+	       - unmount {path} -- unmount given mount point
+
+	      The  output  of  `list`  subcommand is parsed in search of lines
+	      that start with one of the following prefixes:
+	       - device=      - specifies device path (e.g., "/dev/sde")
+	       - label=	      - specifies optional device label (e.g., "Memory
+	      card")
+	       -  mount-point=	-  specifies  a	 mount point (can be absent or
+	      appear more than once)
+
+	      All other lines are ignored.  Each `device=` starts a  new  sec-
+	      tion describing a device which should include two other possible
+	      prefixes.
+
+	      `list` subcommand is assumed  to	always	succeed,  while	 error
+	      stream  and  exit	 code  of  `mount` and `unmount` is taken into
+	      account to determine whether operation  was  performed  success-
+	      fully.
 
        'lsoptions'
 	      type: string list
@@ -3687,6 +3839,11 @@ Globs
 		" always show git log in preview of files inside some repository
 		au DirEnter '~/git-repo/**/*' setl previewprg='git log --color -- %c 2>&1'
 
+       'quickview'
+	      type: boolean
+	      default: false
+	      Whether quick view (:view) is currently active or not.
+
        'relativenumber' 'rnu'
 	      type: boolean
 	      default: false
@@ -3765,10 +3922,25 @@ Globs
 	      Contains	a  sequence  of	 single-character  flags.   Each  flag
 	      enables shortening of some message displayed by vifm in the TUI.
 	      Flags:
-	      T	 -  truncate status-bar messages in the middle if they are too
-	      long to fit on the command line.	"..." will appear in the  mid-
-	      dle.
-	      p - use tilde shortening in view titles.
+	       -  M  - shorten titles in windows of terminal multiplexers cre-
+	      ated by vifm down to file name instead of using full path.
+	       - T - truncate status-bar messages in the middle	 if  they  are
+	      too  long	 to fit on the command line.  "..." will appear in the
+	      middle.
+	       - p - use tilde shortening in view titles.
+
+
+       'showtabline' 'stal'
+	      type: enumeration
+	      default: multiple
+	      Specifies when tab line should be displayed.  Possible values:
+	       - never	  - never display tab line
+	       - multiple - show tab line only when there  are	at  least  two
+	      tabs
+	       - always	  - display tab line always
+
+	      Alternatively  0, 1 and 2 Vim-like values	 are also accepted and
+	      correspond to "never", "multiple" and "always" respectively.
 
 
        'sizefmt'
@@ -3777,13 +3949,13 @@ Globs
 	      Configures the way size is formatted in human-friendly way.
 
 		  item		value	      meaning
-		  units:	 iec		Use 1024 byte units (K or KiB,
+		  units:	iec	      Use 1024 byte units (K  or  KiB,
 	      etc.).
 					      See 'iec' option.
 				si	      Use 1000 byte units (KB, etc.).
 		  precision:	i > 0	      How many fraction digits to con-
 	      sider.
-				{not  set}     Precision of 1 for integer part
+				{not set}     Precision of 1 for integer  part
 	      < 10,
 					      0 otherwise (provides old behav-
 	      iour).
@@ -3799,16 +3971,16 @@ Globs
 	      type: string list
 	      default: ""
 	      only for *nix
-	      A	 list of mounter fs name beginnings (first column in /etc/mtab
-	      or /proc/mounts) or paths prefixes for fs/directories that  work
-	      too  slow	 for  you.   This option can be used to stop vifm from
-	      making some requests to particular kinds of  file	 systems  that
-	      can  slow	 down file browsing.  Currently this means don't check
+	      A list of mounter fs name beginnings (first column in  /etc/mtab
+	      or  /proc/mounts) or paths prefixes for fs/directories that work
+	      too slow for you.	 This option can be used  to  stop  vifm  from
+	      making  some  requests  to particular kinds of file systems that
+	      can slow down file browsing.  Currently this means  don't	 check
 	      if directory has changed, skip check if target of symbolic links
-	      exists,  assume  that  link  target  located  on slow fs to be a
-	      directory (allows entering directories and navigating  to	 files
+	      exists, assume that link target located  on  slow	 fs  to	 be  a
+	      directory	 (allows  entering directories and navigating to files
 	      via gf).	If you set the option to "*", it means all the systems
-	      are considered slow (useful for cygwin,  where  all  the	checks
+	      are  considered  slow  (useful  for cygwin, where all the checks
 	      might render vifm very slow if there are network mounts).
 
 	      Example for autofs root /mnt/autofs:
@@ -3818,20 +3990,20 @@ Globs
        'smartcase' 'scs'
 	      type: boolean
 	      default: false
-	      Overrides	 the  ignorecase option if the search pattern contains
-	      at least one upper case character.  Only	used  when  ignorecase
+	      Overrides the ignorecase option if the search  pattern  contains
+	      at  least	 one  upper case character.  Only used when ignorecase
 	      option is enabled.  It doesn't affect file filtering.
 
        'sort' type: string list
 	      default: +name on *nix and +iname on Windows
 	      scope: local
-	      Sets  list of sorting keys (first item is primary key, second is
+	      Sets list of sorting keys (first item is primary key, second  is
 	      secondary key, etc.):
 		 [+-]ext     - extension of files and directories
 		 [+-]fileext - extension of files only
 		 [+-]name    - name (including extension)
 		 [+-]iname   - name (including extension, ignores case)
-		 [+-]type		 -		file		  type
+		 [+-]type		  -		 file		  type
 	      (dir/reg/exe/link/char/block/sock/fifo)
 		 [+-]dir     - directory grouping (directory < file)
 		 [+-]gid     - group id (*nix only)
@@ -3845,22 +4017,22 @@ Globs
 		 [+-]size    - size
 		 [+-]nitems  - number of items in a directory (zero for files)
 		 [+-]groups  - groups extracted via regexps from 'sortgroups'
-		 [+-]target   -	 symbolic  link	 target	 (empty for other file
+		 [+-]target  - symbolic link  target  (empty  for  other  file
 	      types)
 		 [+-]atime   - time accessed (e.g. read, executed)
 		 [+-]ctime   - time changed (changes in metadata, e.g. mode)
 		 [+-]mtime   - time modified (when file contents is changed)
 
-	      Note: look for st_atime, st_ctime and st_mtime in "man  2	 stat"
+	      Note:  look  for st_atime, st_ctime and st_mtime in "man 2 stat"
 	      for more information on time keys.
 
-	      '+'  means ascending sort for this key, and '-' means descending
+	      '+' means ascending sort for this key, and '-' means  descending
 	      sort.
 
-	      "dir" key is somewhat similar in	this  regard  but  it's	 added
-	      implicitly:  when	 "dir" is not specified, sorting behaves as if
+	      "dir"  key  is  somewhat	similar	 in this regard but it's added
+	      implicitly: when "dir" is not specified, sorting behaves	as  if
 	      it was the first key in the list.	 That's why if one wants sort-
-	      ing  algorithm  to  mix  directories  and files, "dir" should be
+	      ing algorithm to mix directories	and  files,  "dir"  should  be
 	      appended to sorting option, for example like this:
 
 		set sort+=dir
@@ -3869,7 +4041,7 @@ Globs
 
 		set sort=-size,dir
 
-	      Value of the option is checked to include dir  key  and  default
+	      Value  of	 the  option is checked to include dir key and default
 	      sorting key (name on *nix, iname on Windows).  Here is what hap-
 	      pens if one of them is missing:
 
@@ -3892,13 +4064,13 @@ Globs
 	      type: string
 	      default: ""
 	      scope: local
-	      Sets  comma-separated  list  of  regular	expressions to use for
-	      group sorting, double comma is literal comma.   Each  expression
-	      should  contain  at least one group or its value will be consid-
-	      ered to be always empty.	 Only  first  match  of	 each  regular
-	      expression  is  considered.  Groups are considered from right to
-	      first similar to 'sort', first group divides list of files  into
-	      sub-groups,  each	 of which is sorted by the second group and so
+	      Sets comma-separated list of  regular  expressions  to  use  for
+	      group  sorting,  double comma is literal comma.  Each expression
+	      should contain at least one group or its value will  be  consid-
+	      ered  to	be  always  empty.   Only  first match of each regular
+	      expression is considered.	 Groups are considered from  right  to
+	      first  similar to 'sort', first group divides list of files into
+	      sub-groups, each of which is sorted by the second group  and  so
 	      on.
 
 	      Example:
@@ -3914,8 +4086,8 @@ Globs
        'statusline' 'stl'
 	      type: string
 	      default: ""
-	      Determines  the content of the status line (the line right above
-	      command-line).  Empty string means use same format like in  pre-
+	      Determines the content of the status line (the line right	 above
+	      command-line).   Empty string means use same format like in pre-
 	      vious versions.  Following macros are supported:
 
 	      - %t - file name (considering value of the 'classify' option)
@@ -3925,15 +4097,15 @@ Globs
 	      - %f - file name relative to current directory (considers 'clas-
 		sify')
 
-	      - %A - file attributes (permissions on  *nix  or	properties  on
+	      - %A  -  file  attributes	 (permissions on *nix or properties on
 		Windows) %u - user name or uid (if it cannot be resolved)
 
 	      - %g - group name or gid (if it cannot be resolved)
 
 	      - %s - file size in human readable format
 
-	      - %E  - size of selected files in human readable format, same as
-		%s when no files are selected, except that it will never  show
+	      - %E - size of selected files in human readable format, same  as
+		%s  when no files are selected, except that it will never show
 		size of ../ in visual mode, since it cannot be selected
 
 	      - %d - file modification date (uses 'timefmt' option)
@@ -3942,18 +4114,24 @@ Globs
 
 	      - %a - amount of free space available at current partition
 
-	      - %z  -  short  tips/tricks/hints that chosen randomly after one
+	      - %z - short tips/tricks/hints that chosen  randomly  after  one
 		minute period
+
+	      - %{<expr>}  - evaluate arbitrary vifm expression '<expr>', e.g.
+		'&sort'
+
+	      - %* - resets or applies one of User1..User9  highlight  groups;
+		reset  happens	when width field is 0 or not specified, one of
+		groups gets picked when width field is in the range from 1  to
+		9
 
 	      - all 'rulerformat' macros
 
-	      Percent sign can be followed by optional	minimum	 field	width.
+	      Percent  sign  can  be followed by optional minimum field width.
 	      Add '-' before minimum field width if you want field to be right
-	      aligned.	Example:
+	      aligned.
 
-		set statusline="  %t%= %A %10u:%-7g %15s %20d "
-
-	      On Windows file properties include the  following	 flags	(upper
+	      On  Windows  file	 properties include the following flags (upper
 	      case means flag is on):
 	       A - archive
 	       H - hidden
@@ -3966,10 +4144,21 @@ Globs
 	       P - reparse point (e.g. symbolic link)
 	       Z - sparse file
 
+	      Example without colors:
+
+		set statusline="  %t%= %A %10u:%-7g %15s %20d %{&sort} "
+
+	      Example with colors:
+
+	       highlight User1 ctermbg=yellow
+	       highlight User2 ctermbg=blue ctermfg=white cterm=bold
+	       set statusline="%1* %-26t %2* %= %1* %A %2* %7u:%-7g %1* %-5s %2* %d "
+
+
        'suggestoptions'
 	      type: string list
 	      default:
-	      Controls	when, for what and how suggestions are displayed.  The
+	      Controls when, for what and how suggestions are displayed.   The
 	      following values are available:
 	       - normal		 - in normal mode;
 	       - visual		 - in visual mode;
@@ -3978,13 +4167,21 @@ Globs
 	      available;
 	       - delay[:num]	 - display suggestions after a small delay (to
 	      do not annoy if you just want to type a fast shortcut consisting
-	      of  multiple  keys),  num	 specifies  the	 delay	in  ms (500 by
+	      of multiple keys),  num  specifies  the  delay  in  ms  (500  by
 	      default), 'timeoutlen' at most;
 	       - keys		 - include shortcuts (commands and selectors);
 	       - foldsubkeys	 - fold multiple keys with common prefix;
 	       - marks		 - include marks;
-	       - registers[:num] - include registers, at most num files (5  by
+	       -  registers[:num] - include registers, at most num files (5 by
 	      default).
+
+       'syncregs'
+	      type: string
+	      default:
+	      Specifies identifier of group of instances that share  registers
+	      between  each  other.   When several instances of vifm have this
+	      option set to identical value,  they  automatically  synchronize
+	      contents of their registers on operations which use them.
 
        'syscalls'
 	      type: boolean
@@ -3995,6 +4192,16 @@ Globs
 	      option should eventually be removed.  Mostly  *nix-like  systems
 	      are affected.
 
+       'tabscope'
+	      type: enumeration
+	      default: global
+	      Picks  style  of tabs, which defines what a single tab contains.
+	      Possible values:
+	       - global - tab describes complete UI of two views and how  they
+	      are arranged
+	       -  pane	  -  tab is located "inside" a pane and manages it and
+	      quick view
+
        'tabstop' 'ts'
 	      type: integer
 	      default: value from curses library
@@ -4002,8 +4209,8 @@ Globs
 
        'timefmt'
 	      type: string
-	      default: " %m/%d %H:%M"
-	      Format  of  time in file list.  See "man 1 date" or "man 3 strf-
+	      default: "%m/%d %H:%M"
+	      Format of time in file list.  See "man 1 date" or "man  3	 strf-
 	      time" for details.
 
        'timeoutlen' 'tm'
@@ -4015,7 +4222,7 @@ Globs
        'title'
 	      type: boolean
 	      default: true when title can be restored, false otherwise
-	      When  enabled  title  of	the terminal or terminal multiplexer's
+	      When enabled title of the	 terminal  or  terminal	 multiplexer's
 	      window is updated according to current location.
 
        'trash'
@@ -4032,67 +4239,67 @@ Globs
 		       on Windows:
 		 "%r/.vifm-Trash,$XDG_DATA_HOME/vifm/Trash"
 	      List of trash directory path specifications, separated with com-
-	      mas.   Each  list	 item either defines an absolute path to trash
-	      directory or a path relative to a mount  point  root  when  list
-	      element  starts  with  "%r/".   Value  of the option can contain
+	      mas.  Each list item either defines an absolute  path  to	 trash
+	      directory	 or  a	path  relative to a mount point root when list
+	      element starts with "%r/".  Value	 of  the  option  can  contain
 	      environment  variables  (of  form	 "$envname"),  which  will  be
-	      expanded	(prepend  $ with a slash to prevent expansion).	 Envi-
+	      expanded (prepend $ with a slash to prevent  expansion).	 Envi-
 	      ronment variables are expanded when the option is set.
 
-	      On *nix, if element ends with "%u", the mark  is	replaced  with
-	      real  user  ID  and  permissions	are set so that only that only
+	      On  *nix,	 if  element ends with "%u", the mark is replaced with
+	      real user ID and permissions are set  so	that  only  that  only
 	      owner is able to use it.
 	      Note that even this setup is not completely secure when combined
-	      with  "%r/"  and it's overall safer to keep files in home direc-
+	      with "%r/" and it's overall safer to keep files in  home	direc-
 	      tory, but that implies cost of copying files between partitions.
 
-	      When new file gets cut (deleted) vifm traverses each element  of
+	      When  new file gets cut (deleted) vifm traverses each element of
 	      the option in the order of their appearance and uses first trash
-	      directory that  it  was  able  to	 create	 or  that  is  already
+	      directory	 that  it  was	able  to  create  or  that  is already
 	      writable.
 
-	      Default  value  tries to use trash directory per mount point and
+	      Default value tries to use trash directory per mount  point  and
 	      falls back to ~/.vifm/Trash on failure.
 
-	      Will attempt to create the directory if it does not exist.   See
+	      Will  attempt to create the directory if it does not exist.  See
 	      "Trash directory" section below.
 
        'tuioptions' 'to'
 	      type: charset
 	      default: "ps"
-	      Each  flag  configures some aspect of TUI appearance.  The flags
+	      Each flag configures some aspect of TUI appearance.   The	 flags
 	      are:
 	      p - when included:
-		* file list inside a pane  gets	 additional  single  character
+		*  file	 list  inside  a pane gets additional single character
 	      padding on left and right sides;
 		* quick view and view mode get single character padding.
-	      s	 -  when included, left and right borders (side borders, hence
+	      s - when included, left and right borders (side  borders,	 hence
 	      "s" character) are visible.
-	      u - use Unicode characters in the TUI (Unicode ellipsis  instead
+	      u	 - use Unicode characters in the TUI (Unicode ellipsis instead
 	      of "...").
 
        'undolevels' 'ul'
 	      type: integer
 	      default: 100
-	      Maximum  number  of  changes that can be undone.	Note that here
-	      single file operation is used as a  unit,	 not  operation,  i.e.
+	      Maximum number of changes that can be undone.   Note  that  here
+	      single  file  operation  is  used as a unit, not operation, i.e.
 	      deletion of 101 files will exceed default limit.
 
        'vicmd'
 	      type: string
 	      default: "vim"
-	      The  actual command used to start vi.  Ampersand sign at the end
-	      (regardless whether it's preceded by space or not)  means	 back-
+	      The actual command used to start vi.  Ampersand sign at the  end
+	      (regardless  whether  it's preceded by space or not) means back-
 	      grounding of command.
 
-	      Background  flag	is ignored in certain context where vifm waits
-	      for the editor to finish.	 Such  contexts	 include  any  command
-	      that  spawns  editor  to change list of file names or a command,
-	      with :rename being one example.  `-f` is also appended  to  pre-
-	      vent  forking  in such cases, so the command needs to handle the
+	      Background flag is ignored in certain context where  vifm	 waits
+	      for  the	editor	to  finish.  Such contexts include any command
+	      that spawns editor to change list of file names  or  a  command,
+	      with  :rename  being one example.	 `-f` is also appended to pre-
+	      vent forking in such cases, so the command needs to  handle  the
 	      flag.
 
-	      Additionally `+{num}` and `+'call cursor()'` arguments are  used
+	      Additionally  `+{num}` and `+'call cursor()'` arguments are used
 	      to position cursor when location is known.
 
        'viewcolumns'
@@ -4100,12 +4307,12 @@ Globs
 	      default: ""
 	      scope: local
 	      Format string containing list of columns in the view.  When this
-	      option is empty, view columns to show are	 chosen	 automatically
+	      option  is  empty, view columns to show are chosen automatically
 	      using sorting keys (see 'sort') as a base.  Value of this option
-	      is ignored if 'lsview' is set.  See "Column view" section	 below
+	      is  ignored if 'lsview' is set.  See "Column view" section below
 	      for format description.
 
-	      An  example  of  setting the options for both panes (note :windo
+	      An example of setting the options for both  panes	 (note	:windo
 	      command):
 
 		windo set viewcolumns=-{name}..,6{size},11{perms}
@@ -4122,7 +4329,7 @@ Globs
 
 		 bmarks	   - named bookmarks
 		 bookmarks - marks, except special ones like '< and '>
-		 tui	   - state of the user interface (sorting,  number  of
+		 tui	    -  state of the user interface (sorting, number of
 	      windows, quick
 			     view state, active view)
 		 dhistory  - directory history
@@ -4134,7 +4341,7 @@ Globs
 		 chistory  - command line history
 		 shistory  - search history (/ and ? commands)
 		 phistory  - prompt history
-		 fhistory  - history of local filter (see description  of  the
+		 fhistory   -  history of local filter (see description of the
 	      "=" normal mode
 			     command)
 		 dirstack  - directory stack overwrites previous stack, unless
@@ -4144,7 +4351,7 @@ Globs
 		 options   - all options that can be set with the :set command
 	      (obsolete)
 		 filetypes - associated programs and viewers (obsolete)
-		 commands   - user defined commands (see :command description)
+		 commands  - user defined commands (see :command  description)
 	      (obsolete)
 
        'vimhelp'
@@ -4155,7 +4362,7 @@ Globs
        'wildmenu' 'wmnu'
 	      type: boolean
 	      default: false
-	      Controls whether possible matches of completion  will  be	 shown
+	      Controls	whether	 possible  matches of completion will be shown
 	      above the command line.
 
        'wildstyle'
@@ -4167,16 +4374,16 @@ Globs
 
        'wordchars'
 	      type: string list
-	      default:	"1-8,14-31,33-255" (that is all non-whitespace charac-
+	      default: "1-8,14-31,33-255" (that is all non-whitespace  charac-
 	      ters)
-	      Specifies which characters in command-line mode should  be  con-
-	      sidered  as  part of a word.  Value of the option is comma-sepa-
-	      rated list of ranges.  If both endpoints of a range match,  sin-
-	      gle  endpoint  is enough (e.g. "a" = "a-a").  Both endpoints are
+	      Specifies	 which	characters in command-line mode should be con-
+	      sidered as part of a word.  Value of the option  is  comma-sepa-
+	      rated  list of ranges.  If both endpoints of a range match, sin-
+	      gle endpoint is enough (e.g. "a" = "a-a").  Both	endpoints  are
 	      inclusive.  There are two accepted forms: character representing
-	      itself  or  number  encoding character according to ASCII table.
+	      itself or number encoding character according  to	 ASCII	table.
 	      In case of ambiguous characters (dash, comma, digit) use numeric
-	      form.   Accepted characters are in the range from 0 to 255.  Any
+	      form.  Accepted characters are in the range from 0 to 255.   Any
 	      Unicode character with code greater than 255 is considered to be
 	      part of a word.
 
@@ -4202,6 +4409,26 @@ Globs
 	      Searches wrap around end of the list.
 
 Mappings
+       Map arguments
+
+       LHS  of	mappings  can  be preceded by arguments which take the form of
+       special sequences:
+
+       <silent>
+	      Postpone UI updates until RHS is completely processed.
+
+       <wait> In case of builtin mapping causing conflict for  a  user-defined
+	      mapping  (e.g.,  `t`  builtin  to	 a  partially typed `ta` user-
+	      defined mapping), ignore the builtin mapping and wait for	 input
+	      indefinitely  as	opposed to default behaviour of triggering the
+	      builtin mapping after a delay defined by 'timeoutlen'.  Example:
+
+		nnoremap <wait> tw :set wrap!<cr>
+		nnoremap <wait> tn :set number!<cr>
+		nnoremap <wait> tr :set relativenumber!<cr>
+
+       Special sequences
+
        Since it's not easy to enter special characters there are several  spe-
        cial sequences that can be used in place of them.  They are:
 
@@ -4234,8 +4461,14 @@ Mappings
 	      Delete  key.   <del>  and	 <delete>  mean	 different  codes, but
 	      <delete> is more common.
 
+       <insert>
+	      Insert key.
+
        <c-a>,<c-b>,...,<c-z>,<c-[>,<c->,<c-]>,<c-^>,<c-_>
 	      Control + some key (see key conflict description below).
+
+       <c-@>  only for *nix
+	      Control + Space.
 
        <a-a>,<a-b>,...,<a-z>
 	      <m-a>,<m-b>,...,<m-z> Alt + some key.
@@ -4283,6 +4516,8 @@ Mappings
 	 " if mappings with <bs> in the LHS work
 	 map <bs> <c-h>
 
+       Whitespace
+
        vifm  removes  whitespace  characters  at the beginning and end of com-
        mands.  That's why you may want to use <space> at the  end  of  rhs  in
        mappings.  For example:
@@ -4297,36 +4532,46 @@ Expression syntax
 
        Expression syntax summary, from least to most significant:
 
-       expr1	  expr2 || expr2 ..	  logical OR
+       expr1	  expr2
+		  expr2 || expr2 ..	  logical OR
 
-       expr2	  expr3 && expr3 ..	  logical AND
+       expr2	  expr3
+		  expr3 && expr3 ..	  logical AND
 
-       expr3	  expr4 == expr4	  equal
+       expr3	  expr4
+		  expr4 == expr4	  equal
 		  expr4 != expr4	  not equal
 		  expr4 >  expr4	  greater than
 		  expr4 >= expr4	  greater than or equal
 		  expr4 <  expr4	  smaller than
 		  expr4 <= expr4	  smaller than or equal
 
-       expr4	  expr5 . expr5 ..	  string concatenation
+       expr4	  expr5
+		  expr5 + expr5 ..	  number addition
+		  expr5 - expr5 ..	  number subtraction
 
-       expr5	  - expr5		  unary minus
-		  + expr5		  unary plus
-		  ! expr5		  logical NOT
+       expr5	  expr6
+		  expr6 . expr6 ..	  string concatenation
 
-       expr6	  number		  number constant
+       expr6	  expr7
+		  - expr6		  unary minus
+		  + expr6		  unary plus
+		  ! expr6		  logical NOT
+
+       expr7	  number		  number constant
 		  "string"		  string constant, \ is special
 		  'string'		  string constant, ' is doubled
 		  &option		  option value
 		  $VAR			  environment variable
 		  v:var			  builtin variable
 		  function(expr1, ...)	  function call
+		  (expr1)		  nested expression
 
        ".." indicates that the operations in this level can be concatenated.
 
        expr1
        -----
-       expr2 || expr1
+       expr2 || expr2
 
        Arguments are converted to numbers before evaluation.
 
@@ -4338,7 +4583,7 @@ Expression syntax
 
        expr2
        -----
-       expr3 && expr2
+       expr3 && expr3
 
        Arguments are converted to numbers before evaluation.
 
@@ -4376,19 +4621,29 @@ Expression syntax
 
        expr4
        -----
-       expr5 . expr5 ..	    string concatenation
+       expr5  +	 expr5 ..     number addition expr5 - expr5 ..	   number sub-
+       traction
+
+       Examples:
+
+	 1 + 3 - 3	    == 1
+	 1 + '2'	    == 3
+
+       expr5
+       -----
+       expr6 . expr6 ..	    string concatenation
 
        Examples:
 
 	 'a' . 'b'	     == 'ab'
 	 'aaa' . '' . 'c'    == 'aaac'
 
-       expr5
+       expr6
        -----
 
-       - expr5		    unary minus
-       + expr5		    unary plus
-       ! expr5		    logical NOT
+       - expr6		    unary minus
+       + expr6		    unary plus
+       ! expr6		    logical NOT
 
        For '-' the sign of the number is changed.
        For '+' the number is unchanged.
@@ -4406,7 +4661,7 @@ Expression syntax
 	 !'x'		     == 0
 	  !!9		     == 1
 
-       expr6
+       expr7
        -----
 
        number		    number constant
@@ -4446,8 +4701,8 @@ Expression syntax
 
        Note that single quotes are used.
 
-       This  string  is	 taken as it is.  No backslashes are removed or have a
-       special meaning.	 The only exception is that two quotes stand  for  one
+       This string is taken as it is.  No backslashes are removed  or  have  a
+       special	meaning.   The only exception is that two quotes stand for one
        quote.
 
        Examples:
@@ -4457,8 +4712,8 @@ Expression syntax
 
        option
        ------
-       &option		      option value (local one is preferred, if exists)
-       &g:option	     global option value  &l:option		 local
+       &option		     option value (local one is preferred, if  exists)
+       &g:option	      global  option value &l:option		 local
        option value
 
        Examples:
@@ -4466,14 +4721,14 @@ Expression syntax
 	 echo 'Terminal size: '.&columns.'x'.&lines
 	 if &columns > 100
 
-       Any  valid  option name can be used here (note that "all" in ":set all"
+       Any valid option name can be used here (note that "all" in  ":set  all"
        is a pseudo option).  See ":set options" section above.
 
        environment variable
        --------------------
        $VAR		     environment variable
 
-       The String value of any environment variable.  When it is not  defined,
+       The  String value of any environment variable.  When it is not defined,
        the result is an empty string.
 
        Examples:
@@ -4488,7 +4743,7 @@ Expression syntax
        Information exposed by vifm for use in scripting.
 
        v:count
-	 count	passed to : command, 0 by default.  Can be used in mappings to
+	 count passed to : command, 0 by default.  Can be used in mappings  to
        pass
 	 count to a different command.
        v:count1
@@ -4507,25 +4762,37 @@ Expression syntax
 	 "'" . filetype('.') . "'"
 	 filetype('.') == 'reg'
 
-Functions
-       USAGE		   RESULT	 DESCRIPTION
+       expression nesting
+       ------------------
+       (expr1)		     nested expression
 
-       chooseopt({opt})	   String	 Queries choose parameters  passed  on
+       Groups  any other expression of arbitrary complexity enforcing order in
+       which operators are applied.
+
+
+Functions
+       USAGE		     RESULT	 DESCRIPTION
+
+       chooseopt({opt})	     String	 Queries choose parameters  passed  on
        startup.
-       executable({expr})   Integer	  Checks whether {expr} command avail-
+       executable({expr})     Integer	  Checks whether {expr} command avail-
        able.
-       expand({expr})	   String	 Expands special keywords in {expr}.
-       filetype({fnum})	   String	 Returns file type from position.
-       getpanetype()	   String	 Returns type of current pane.
-       has({property})	   Integer	 Checks whether	 instance  has	{prop-
+       expand({expr})	     String	 Expands special keywords in {expr}.
+       filetype({fnum} [, {resolve}])
+			     String	 Returns file type from position.
+       fnameescape({expr})   String	 Escapes {expr} for use in a :command.
+       getpanetype()	     String	 Returns type of current pane.
+       has({property})	     Integer	 Checks whether	 instance  has	{prop-
        erty}.
-       layoutis({type})	    Integer	   Checks  whether  layout  is of type
+       layoutis({type})	      Integer	   Checks  whether  layout  is of type
        {type}.
-       paneisat({loc})	   Integer	 Checks whether	 current  pane	is  at
+       paneisat({loc})	     Integer	 Checks whether	 current  pane	is  at
        {loc}.
-       system({command})    String	   Executes  shell command and returns
+       system({command})      String	   Executes  shell command and returns
        its output.
-       term({command})	   String	 Like system(),	 but  for  interactive
+       tabpagenr([{arg}])    Integer	 Returns number	 of  current  or  last
+       tab.
+       term({command})	      String	   Like	 system(), but for interactive
        commands.
 
        chooseopt({opt})
@@ -4540,8 +4807,8 @@ Functions
        executable({expr})
 
        If {expr} is absolute or relative path, checks whether path destination
-       exists  and  refers  to an executable, otherwise checks whether command
-       named {expr} is present in directories listed  in  $PATH.   Checks  for
+       exists and refers to an executable, otherwise  checks  whether  command
+       named  {expr}  is  present  in directories listed in $PATH.  Checks for
        various	executable  extensions	on  Windows.   Returns	boolean	 value
        describing result of the check.
 
@@ -4559,8 +4826,8 @@ Functions
 
        expand({expr})
 
-       Expands environment variables and macros in {expr} just like it's  done
-       for  command-line  commands.   Returns  a string.  See "Command macros"
+       Expands	environment variables and macros in {expr} just like it's done
+       for command-line commands.  Returns a  string.	See  "Command  macros"
        section above.
 
        Examples:
@@ -4572,22 +4839,40 @@ Functions
 	 " $PATH environment variable (same as `:echo $PATH`)
 	 :echo expand('$PATH')
 
-       filetype({fnum})
+       filetype({fnum}[,{resolve}])
 
-       The result is a string, which represents file type and is  one  of  the
+       The  result  is	a string, which represents file type and is one of the
        list:
-	   exe	  executables
-	   reg	  regular files
-	   link	  symbolic links
-	   dir	  directories
-	   char	  character devices
-	   block  block devices
-	   fifo	  pipes
-	   sock	  *nix domain sockets
-	   ?	  unknown file type (should never appear)
+	   exe	   executables
+	   reg	   regular files
+	   link	   symbolic links
+	   broken  broken symbolic links (appears only when resolving)
+	   dir	   directories
+	   char	   character devices
+	   block   block devices
+	   fifo	   pipes
+	   sock	   *nix domain sockets
+	   ?	   unknown file type (should not normally appear)
+
+       The result can also be an empty string in case of invalid argument.
 
        Parameter {fnum} can have following values:
 	   - '.' to get type of file under the cursor in the active pane
+	   - numerical value base 1 to get type of file on specified line num-
+       ber
+
+       Optional	 parameter  {resolve}  is  treated  as a boolean and specifies
+       whether symbolic links should be resolved.
+
+       fnameescape({expr})
+
+       Escapes parameter to make it suitable for use as an argument of a :com-
+       mand.  List of escaped characters includes %, which is doubled.
+
+       Usage example:
+
+	 " navigate to most recently modified file in current directory
+	 execute 'goto' fnameescape(system('ls -t | head -1'))
 
        getpanetype()
 
@@ -4654,6 +4939,14 @@ Functions
 
 	 " command to enter .git/ directory of git-repository (when ran inside one)
 	 command! cdgit :execute 'cd' system('git rev-parse --git-dir')
+
+       tabpagenr([{arg}])
+
+       When called without arguments returns number of current tab  page  base
+       one.
+
+       When called with "$" as an argument returns number of the last tab page
+       base one, which is the same as number of tabs.
 
        term({command})
 
@@ -4733,7 +5026,7 @@ Menus and dialogs
 
        Apropos menu
 
-       Selecting menu item run man on a given topic.   Menu  won't  be	closed
+       Selecting menu item runs man on a given topic.  Menu  won't  be	closed
        automatically to allow view several pages one by one.
 
        Command-line mode abbreviations menu
@@ -4874,37 +5167,50 @@ Menus and dialogs
        h.
 
 
+       Undolist menu
+
+       r - reset undo position to group under the cursor.
+
+
+       Media menu
+
+       r - reload the list.
+
+       m - mount/unmount device (cursor should be positioned  on  lines	 under
+       device information).
+
+
 Custom views
        Definition
 
-       Normally file views contain list of files from a single directory,  but
-       sometimes  it's	useful to populate them with list of files that do not
+       Normally	 file views contain list of files from a single directory, but
+       sometimes it's useful to populate them with list of files that  do  not
        belong to the same directory, which is what custom views are for.
 
        Presentation
 
-       Custom views are still related to directory they were in before	custom
-       list  was  loaded.   Path to that directory (original directory) can be
+       Custom  views are still related to directory they were in before custom
+       list was loaded.	 Path to that directory (original  directory)  can  be
        seen in the title of a custom view.
 
        Files in same directory have to be named differently, this doesn't hold
        for custom views thus seeing just file names might be rather confusing.
        In order to give an idea where files come from and when possible, rela-
-       tive  paths  to	original directory of the view is displayed, otherwise
+       tive paths to original directory of the view  is	 displayed,  otherwise
        full path is used instead.
 
        Custom views normally don't contain any inexistent files.
 
        Navigation
 
-       Custom views have some differences related  to  navigation  in  regular
+       Custom  views  have  some  differences related to navigation in regular
        views.
 
-       gf  - acts similar to gf on symbolic links and navigates to the file at
+       gf - acts similar to gf on symbolic links and navigates to the file  at
        its real
 	    location.
 
-       h - go to closes parent node in tree  view,  otherwise  return  to  the
+       h  -  go	 to  closes  parent node in tree view, otherwise return to the
        original directory.
 
        gh - return to the original directory.
@@ -4913,49 +5219,49 @@ Custom views
 
        History
 
-       Custom  list exists only while it's visible, once left one can't return
+       Custom list exists only while it's visible, once left one can't	return
        to it, so there is no appearances of it in any history.
 
        Filters
 
-       Only local filter affects content of the view.	This  is  intentional,
-       presumably  if  one loads list, precisely that list should be displayed
+       Only  local  filter  affects content of the view.  This is intentional,
+       presumably if one loads list, precisely that list should	 be  displayed
        (except for inexistent paths, which are ignored).
 
        Search
 
-       Although directory names are visible in listing, they are  not  search-
-       able.   Only  file  names  are  taken into account (might be changed in
+       Although	 directory  names are visible in listing, they are not search-
+       able.  Only file names are taken into  account  (might  be  changed  in
        future, searching whole lines seems quite reasonable).
 
        Sorting
 
-       Contrary to search sorting by name works on whole visible part of  file
+       Contrary	 to search sorting by name works on whole visible part of file
        path.
 
        Highlight
 
-       Whole  file name is highlighted as one entity, even if there are direc-
+       Whole file name is highlighted as one entity, even if there are	direc-
        tory elements.
 
        Updates
 
-       Reloads can occur, though they are not automatic	 due  to  files	 being
-       scattered  among	 different  places.  On a reload, inexistent files are
+       Reloads	can  occur,  though  they are not automatic due to files being
+       scattered among different places.  On a reload,	inexistent  files  are
        removed and meta-data of all other files is updated.
 
-       Once custom view forgets about the file, it won't add it back  even  if
+       Once  custom  view forgets about the file, it won't add it back even if
        it's created again.  So not seeing file previously affected by an oper-
        ation, which was undone is normal.
 
        Operations
 
-       All operations that add files are  forbidden  for  custom  views.   For
-       example,	 moving/copying/putting files into a custom view doesn't work,
+       All  operations	that  add  files  are forbidden for custom views.  For
+       example, moving/copying/putting files into a custom view doesn't	 work,
        because it doesn't make much sense.
 
-       On the other hand, operations that use files of	a  custom  view	 as  a
-       source  (e.g. yanking, copying, moving file from custom view, deletion)
+       On  the	other  hand,  operations  that use files of a custom view as a
+       source (e.g. yanking, copying, moving file from custom view,  deletion)
        and operations that modify names are all allowed.
 
 Compare views
@@ -4967,18 +5273,18 @@ Compare views
 	- two compare views (ofboth and either listall or listdups);
 	- two custom views (ofboth and listunique).
 
-       The first two display files of one file system tree.   Here  duplicates
-       are  files that have at least one copy in the same tree.	 The other two
-       kinds of operation compare two trees, in	 which	duplicates  are	 files
+       The  first  two display files of one file system tree.  Here duplicates
+       are files that have at least one copy in the same tree.	The other  two
+       kinds  of  operation  compare  two trees, in which duplicates are files
        that are found in both trees.
 
        Lists of unique files are presented in custom views because there is no
-       file grouping to preserve as all file ids are  guaranteed  to  be  dis-
+       file  grouping  to  preserve  as all file ids are guaranteed to be dis-
        tinct.
 
        Creation
 
-       Arguments  passed  to  :compare	form four categories each with its own
+       Arguments passed to :compare form four categories  each	with  its  own
        prefix and is responsible for particular property of operation.
 
        Which files to compare:
@@ -4996,9 +5302,9 @@ Compare views
 	- listdups   - only duplicated files.
 
        How results are grouped (has no effect if "ofone" specified):
-	- groupids   - files considered identical are always adjacent in  out-
+	-  groupids   - files considered identical are always adjacent in out-
        put;
-	-  grouppaths  -  file system ordering is preferred (this also enables
+	- grouppaths - file system ordering is preferred  (this	 also  enables
        displaying identically named files as mismatches).
 
        Which files to omit:
@@ -5010,8 +5316,8 @@ Compare views
 
        Examples
 
-       The defaults corresponds to probably the most common use case  of  com-
-       paring  files in two trees with grouping by paths, so the following are
+       The  defaults  corresponds to probably the most common use case of com-
+       paring files in two trees with grouping by paths, so the following  are
        equivalent:
 
 	 :compare
@@ -5028,52 +5334,52 @@ Compare views
 
        Look
 
-       The view can't switch to ls-like view as it's unable to	display	 diff-
+       The  view  can't switch to ls-like view as it's unable to display diff-
        like data.
 
-       Comparison  views  have	second column displaying id of the file, files
-       with same id are considered to be equal.	 The view  columns  configura-
+       Comparison views have second column displaying id of  the  file,	 files
+       with  same  id are considered to be equal.  The view columns configura-
        tion is predefined.
 
        Behaviour
 
-       When  two  views	 are  being  compared against each other the following
+       When two views are being compared  against  each	 other	the  following
        changes to the regular behaviour apply:
 	- views are scrolled synchronously (as if 'scrollbind' was set);
 	- views' cursors are synchronized;
 	- local filtering is disabled (its results wouldn't be meaningful);
-	- zd excludes groups of adjacent identical files, 1zd gives usual  be-
+	-  zd excludes groups of adjacent identical files, 1zd gives usual be-
        haviour;
 	- sorting is permanently disabled (ordering is fixed);
 	- removed files hide their counter pairs;
 	- exiting one of the views terminates the other immediately;
 	- renaming files isn't blocked, but isn't taken into account and might
        require regeneration of comparison;
-	- entries which indicate absence of equivalent file have  empty	 names
+	-  entries  which indicate absence of equivalent file have empty names
        and can be matched as such;
-	-  when	 unique	 files	of  both  views are listed custom views can be
+	- when unique files of both views  are	listed	custom	views  can  be
        empty, this absence of unique files is stated clearly.
 
-       One compare view has similar properties (those that are applicable  for
+       One  compare view has similar properties (those that are applicable for
        single pane).
 
        Files are gathered in this way:
 	- recursively starting at current location of the view;
-	-  dot files are excluded if view hides them at the moment of compari-
+	- dot files are excluded if view hides them at the moment of  compari-
        son;
 	- directories are not taken into account;
 	- symbolic links to directories are ignored.
 
 Startup
-       On startup vifm determines several variables that are used  during  the
+       On  startup  vifm determines several variables that are used during the
        session.	 They are determined in the order they appear below.
 
-       On  *nix	 systems $HOME is normally present and used as is.  On Windows
-       systems vifm tries to find correct  home	 directory  in	the  following
+       On *nix systems $HOME is normally present and used as is.   On  Windows
+       systems	vifm  tries  to	 find  correct home directory in the following
        order:
 	- $HOME variable;
 	- $USERPROFILE variable (on Windows only);
-	-  a  combination  of  $HOMEDRIVE  and $HOMEPATH variables (on Windows
+	- a combination of $HOMEDRIVE  and  $HOMEPATH  variables  (on  Windows
        only).
 
        vifm tries to find correct configuration directory by checking the fol-
@@ -5092,19 +5398,19 @@ Startup
 	- $VIFM/vifmrc file.
 
 Configure
-       See "Startup" section above for the explanations	 on  $VIFM  and	 $MYV-
+       See  "Startup"  section	above  for the explanations on $VIFM and $MYV-
        IFMRC.
 
-       The  vifmrc  file  contains  commands  that  will  be  executed on vifm
+       The vifmrc file	contains  commands  that  will	be  executed  on  vifm
        startup.	 There are two such files: global and local.  Global one is at
-       {prefix}/etc/vifm/vifmrc,  see  $MYVIFMRC  variable description for the
-       search algorithm used to find local vifmrc.  Global  vifmrc  is	loaded
-       before  the local one, so that the later one can redefine anything con-
+       {prefix}/etc/vifm/vifmrc, see $MYVIFMRC variable	 description  for  the
+       search  algorithm  used	to find local vifmrc.  Global vifmrc is loaded
+       before the local one, so that the later one can redefine anything  con-
        figured globally.
 
        Use vifmrc to set settings, mappings, filetypes etc.  To use multi line
-       commands	 precede  each next line with a slash (whitespace before slash
-       is ignored, but all spaces at the end of the  lines  are	 saved).   For
+       commands precede each next line with a slash (whitespace	 before	 slash
+       is  ignored,  but  all  spaces at the end of the lines are saved).  For
        example:
 
 	 set
@@ -5117,51 +5423,51 @@ Configure
 
        equals "set  smartcase".
 
-       The  $VIFM/vifminfo file contains session settings.  You may edit it by
-       hand to change the settings, but it's not recommended to do that,  edit
-       vifmrc  instead.	  You  can  control  what  settings  will  be saved in
+       The $VIFM/vifminfo file contains session settings.  You may edit it  by
+       hand  to change the settings, but it's not recommended to do that, edit
+       vifmrc instead.	You  can  control  what	 settings  will	 be  saved  in
        vifminfo by setting 'vifminfo' option.  Vifm always writes this file on
-       exit  unless  'vifminfo'	 option is empty.  Marks, bookmarks, commands,
-       histories, filetypes, fileviewers and registers in the file are	merged
+       exit unless 'vifminfo' option is empty.	 Marks,	 bookmarks,  commands,
+       histories,  filetypes, fileviewers and registers in the file are merged
        with vifm configuration (which has bigger priority).
 
-       Generally,  runtime  configuration  has bigger priority during merging,
+       Generally, runtime configuration has bigger  priority  during  merging,
        but there are some exceptions:
 
-	 - directory stack stored in the file is not overwritten unless	 some-
+	 - directory  stack stored in the file is not overwritten unless some-
 	   thing is changed in vifm session that performs merge;
 
-	 - each	 mark  or  bookmark  is marked with a timestamp, so that newer
+	 - each mark or bookmark is marked with a  timestamp,  so  that	 newer
 	   value is not overwritten by older one, thus no matter from where it
 	   comes, the newer one wins.
 
-       The  $VIFM/scripts  directory can contain shell scripts.	 vifm modifies
-       its PATH environment variable to let user  run  those  scripts  without
-       specifying  full path.  All subdirectories of the $VIFM/scripts will be
-       added to PATH too.  Script in a subdirectory overlaps script  with  the
+       The $VIFM/scripts directory can contain shell scripts.	vifm  modifies
+       its  PATH  environment  variable	 to let user run those scripts without
+       specifying full path.  All subdirectories of the $VIFM/scripts will  be
+       added  to  PATH too.  Script in a subdirectory overlaps script with the
        same name in all its parent directories.
 
-       The  $VIFM/colors/  and	{prefix}/etc/vifm/colors/  directories contain
-       color schemes.  Available color schemes are searched in that order,  so
+       The $VIFM/colors/  and  {prefix}/etc/vifm/colors/  directories  contain
+       color  schemes.	Available color schemes are searched in that order, so
        on name conflict the one in $VIFM/colors/ wins.
 
-       Each  color scheme should have ".vifm" extension.  This wasn't the case
+       Each color scheme should have ".vifm" extension.	 This wasn't the  case
        before and for this reason the following rules apply during lookup:
 
-	 - if there is no file with .vifm extension,  all  regular  files  are
+	 - if  there  is  no  file with .vifm extension, all regular files are
 	   listed;
 
-	 - otherwise  only  files  with	 .vifm	extension are listed (with the
+	 - otherwise only files with .vifm  extension  are  listed  (with  the
 	   extension being truncated).
 
 Automatic FUSE mounts
        vifm has a builtin support of automated FUSE file system mounts.	 It is
-       implemented  using  file	 associations  mechanism.  To enable automated
+       implemented using file associations  mechanism.	 To  enable  automated
        mounts, one needs to use a specially formatted program line in filetype
        or filextype commands.  Currently two formats are supported:
 
-       1)  FUSE_MOUNT  This format should be used in case when all information
-       needed for mounting all files of a particular type is the  same.	  E.g.
+       1) FUSE_MOUNT This format should be used in case when  all  information
+       needed  for  mounting all files of a particular type is the same.  E.g.
        mounting of tar files don't require any file specific options.
 
        Format line:
@@ -5171,8 +5477,8 @@ Automatic FUSE mounts
 
 	 :filetype FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR
 
-       2)  FUSE_MOUNT2 This format allows one to use specially formatted files
-       to perform mounting and is useful for  mounting	remotes,  for  example
+       2) FUSE_MOUNT2 This format allows one to use specially formatted	 files
+       to  perform  mounting  and  is useful for mounting remotes, for example
        remote file systems over ftp or ssh.
 
        Format line:
@@ -5186,68 +5492,68 @@ Automatic FUSE mounts
 
 	 root@127.0.0.1:/
 
-       All  %  macros  are  expanded by vifm at runtime and have the following
+       All % macros are expanded by vifm at runtime  and  have	the  following
        meaning:
 	 - %SOURCE_FILE is replaced by full path to selected file;
 	 - %DESTINATION_DIR is replaced by full path to mount directory, which
        is created by vifm basing on the value of 'fusehome' option;
-	 -  %PARAM  value  is filled from the first line of file (whole line),
+	 - %PARAM value is filled from the first line of  file	(whole	line),
        though in the future it can be changed to whole file content;
-	 - %FOREGROUND means that you want to run mount command as  a  regular
-       command	(required  to  be able to provide input for communication with
+	 -  %FOREGROUND	 means that you want to run mount command as a regular
+       command (required to be able to provide input  for  communication  with
        mounter in interactive way).
 
-       %FOREGROUND is an optional macro.  Other macros are not mandatory,  but
+       %FOREGROUND  is an optional macro.  Other macros are not mandatory, but
        mount commands likely won't work without them.
 
-       %CLEAR  is  obsolete name of %FOREGROUND, which is still supported, but
+       %CLEAR is obsolete name of %FOREGROUND, which is still  supported,  but
        might be removed in future.  Its use is discouraged.
 
-       The mounted FUSE file systems will be automatically  unmounted  in  two
+       The  mounted  FUSE  file systems will be automatically unmounted in two
        cases:
 
 	 - when vifm quits (with ZZ, :q, etc. or when killed by signal);
 
 	 - when you explicitly leave mount point going up to its parent direc-
-	   tory (with h, Enter on "../" or ":cd ..") and other pane is not  in
+	   tory	 (with h, Enter on "../" or ":cd ..") and other pane is not in
 	   the same directory or its child directories.
 
 View look
        vifm supports displaying of file list view in two different ways:
 
-	 - in  a  table	 mode,	when  multiple columns can be set using 'view-
+	 - in a table mode, when multiple columns  can	be  set	 using	'view-
 	   columns' option (see "Column view" section below for details);
 
-	 - in a multicolumn list manner which looks almost like `ls  -x`  com-
+	 - in  a  multicolumn list manner which looks almost like `ls -x` com-
 	   mand output (see "ls-like view" section below for details).
 
-       The  look is local for each view and can be chosen by changing value of
+       The look is local for each view and can be chosen by changing value  of
        the 'lsview' boolean option.
 
-       Depending on view look some of keys change their meaning to allow  more
+       Depending  on view look some of keys change their meaning to allow more
        natural cursor moving.  This concerns mainly h, j, k, l and other simi-
        lar navigation keys.
 
-       Also some of options can be ignored if they don't affect view  display-
+       Also  some of options can be ignored if they don't affect view display-
        ing in selected look.  For example value of 'viewcolumns' when 'lsview'
        is set.
 
 ls-like view
        When this view look is enabled by setting 'lsview' option on, vifm will
-       display	files  in  multiple columns.  Number of columns depends on the
-       length of the longest file name present in  current  directory  of  the
-       view.   Whole  file list is automatically reflowed on directory change,
+       display files in multiple columns.  Number of columns  depends  on  the
+       length  of  the	longest	 file name present in current directory of the
+       view.  Whole file list is automatically reflowed on  directory  change,
        terminal or view resize.
 
        View looks close to output of `ls -x` command, so files are listed left
        to right in rows.
 
-       In  this	 mode file manipulation commands (e.g. d) don't work line-wise
-       like they do in Vim, since such operations would be uncommon  for  file
-       manipulation  tasks.   Thus,  for  example, dd will remove only current
+       In this mode file manipulation commands (e.g. d) don't  work  line-wise
+       like  they  do in Vim, since such operations would be uncommon for file
+       manipulation tasks.  Thus, for example, dd  will	 remove	 only  current
        file.
 
-       By default the view is filled by lines, 'lsoptions' can be used to  get
+       By  default the view is filled by lines, 'lsoptions' can be used to get
        filling by columns.
 
        Note that tree-view and compare view inhibit ls-like view.
@@ -5266,7 +5572,7 @@ Column view
 
        Alignment specifier
 
-       It's an optional minus or asterisk sign as  the	first  symbol  of  the
+       It's  an	 optional  minus  or  asterisk sign as the first symbol of the
        string.
 
        Specifies type of text alignment within a column.  Three types are sup-
@@ -5282,16 +5588,16 @@ Column view
 
        - dynamic align
 
-	 It's like left alignment, but when the text is bigger than  the  col-
-	 umn,  the alignment is made at the right (so the part of the field is
+	 It's  like  left alignment, but when the text is bigger than the col-
+	 umn, the alignment is made at the right (so the part of the field  is
 	 always visible).
 
 	   set viewcolumns=*{name}
 
        Width specifier
 
-       It's a number followed by a  percent  sign,  two	 numbers  (second  one
-       should  be less than or equal to the first one) separated with a dot or
+       It's  a	number	followed  by  a	 percent sign, two numbers (second one
+       should be less than or equal to the first one) separated with a dot  or
        a single number.
 
        Specifies column width and its units. There are three size types:
@@ -5300,27 +5606,27 @@ Column view
 
 	   set viewcolumns=-100{name},20.15{ext}
 
-	 results in two columns with lengths of 100  and  20  and  a  reserved
+	 results  in  two  columns  with  lengths of 100 and 20 and a reserved
 	 space of five characters on the left of second column.
 
-       - relative  (percent)  size  - column width is specified in percents of
+       - relative (percent) size - column width is specified  in  percents  of
 	 view width
 
 	   set viewcolumns=-80%{name},15%{ext},5%{mtime}
 
-	 results in three columns with lengths of 80/100, 15/100 and 5/100  of
+	 results  in three columns with lengths of 80/100, 15/100 and 5/100 of
 	 view width.
 
        - auto size (default) - column width is automatically determined
 
 	   set viewcolumns=-{name},{ext},{mtime}
 
-	 results  in  three  columns  with  length of one third of view width.
-	 There is no size adjustment to content, since it will slow down  ren-
+	 results in three columns with length of  one  third  of  view	width.
+	 There	is no size adjustment to content, since it will slow down ren-
 	 dering.
 
-       Columns	of  different  sizing  types  can be freely mixed in one view.
-       Though sometimes some of columns can be seen partly  or	be  completely
+       Columns of different sizing types can be	 freely	 mixed	in  one	 view.
+       Though  sometimes  some	of columns can be seen partly or be completely
        invisible if there is not enough space to display them.
 
        Column name
@@ -5329,16 +5635,16 @@ Column view
 
 	 {name},{ext},{mtime}
 
-       {name}  and  {iname} keys are the same and present both for consistency
+       {name} and {iname} keys are the same and present both  for  consistency
        with 'sort' option.
 
        Following keys don't have corresponding sorting keys:
 
 	 - {root} - display name without extension (as a complement for {ext})
 
-       Empty curly braces ({}) are replaced with the default secondary	column
-       for  primary sort key. So after the next command view will be displayed
-       almost as if 'viewcolumns' is empty, but adding ellipsis for long  file
+       Empty  curly braces ({}) are replaced with the default secondary column
+       for primary sort key. So after the next command view will be  displayed
+       almost  as if 'viewcolumns' is empty, but adding ellipsis for long file
        names:
 
 	 set viewcolumns=-{name}..,6{}.
@@ -5347,22 +5653,22 @@ Column view
 
        It's from one to three dots after closing curly brace in column format.
 
-       Specifies  type	of  text  truncation  if it doesn't fit in the column.
+       Specifies type of text truncation if it	doesn't	 fit  in  the  column.
        Currently three types are supported:
 
 	 - truncation - text is truncated
 
 	     set viewcolumns=-{name}.
 
-	   results in truncation of names that are too long  too  fit  in  the
+	   results  in	truncation  of	names that are too long too fit in the
 	   view.
 
-	 - adding  of  ellipsis - ellipsis on the left or right are added when
+	 - adding of ellipsis - ellipsis on the left or right are  added  when
 	   needed
 
 	     set viewcolumns=-{name}..
 
-	   results in that ellipsis are added at the  end  of  too  long  file
+	   results  in	that  ellipsis	are  added at the end of too long file
 	   names.
 
 	 - none (default) - text can pass column boundaries
@@ -5385,20 +5691,20 @@ Color schemes
 
 	 - :colorscheme color_scheme_name directory - for local color schemes.
 
-       Look of different parts of the TUI (Text User Interface) is  determined
+       Look  of different parts of the TUI (Text User Interface) is determined
        in this way:
 
-	 - Border,   TopLineSel,   TopLine,   CmdLine,	ErrorMsg,  StatusLine,
-	   JobLine, SuggestBox and WildMenu are always determined by the  pri-
-	   mary color scheme;
+	 - Border,  TabLine,   TabLineSel,   TopLineSel,   TopLine,   CmdLine,
+	   ErrorMsg,  StatusLine,  JobLine, SuggestBox and WildMenu are always
+	   determined by the primary color scheme;
 
-	 - CurrLine,  Selected,	 Directory,  Link, BrokenLink, Socket, Device,
-	   Executable, Fifo, CmpMismatch, Win and  AuxWin  are	determined  by
+	 - CurrLine, Selected, Directory, Link,	 BrokenLink,  Socket,  Device,
+	   Executable,	Fifo,  CmpMismatch,  Win  and AuxWin are determined by
 	   primary color scheme and a set of local color schemes, which can be
 	   empty.
 
        There might be a set of local color schemes because they are structured
-       hierarchically  according to file system structure. For example, having
+       hierarchically according to file system structure. For example,	having
        the following piece of file system:
 
 	 ~
@@ -5438,73 +5744,73 @@ Color schemes
 Trash directory
        vifm has support of trash directory, which is used as temporary storage
        for deleted files or files that were cut.  Using trash is controlled by
-       the 'trash' option, and exact  path  to	the  trash  can	 be  set  with
-       'trashdir'  option.   Trash  directory in vifm differs from the system-
-       wide one by default, because of possible incompatibilities  of  storing
-       deleted	 files	among  different  file	managers.   But	 one  can  set
-       'trashdir' to "~/.local/share/Trash" to use a "standard"	 trash	direc-
+       the  'trash'  option,  and  exact  path	to  the	 trash can be set with
+       'trashdir' option.  Trash directory in vifm differs  from  the  system-
+       wide  one  by default, because of possible incompatibilities of storing
+       deleted	files  among  different	 file  managers.   But	one  can   set
+       'trashdir'  to  "~/.local/share/Trash" to use a "standard" trash direc-
        tory.
 
        There are two scenarios of using trash in vifm:
 
-	 1. As	a  place  for  storing	files  that were cut by "d" and may be
+	 1. As a place for storing files that were  cut	 by  "d"  and  may  be
 	    inserted to some other place in file system.
 
 	 2. As a storage of files, that are deleted but not purged yet.
 
        The first scenario uses deletion ("d") operations to put files to trash
-       and  put	 ("p") operations to restore files from trash directory.  Note
-       that such operations move files to and from trash directory, which  can
-       be  long	 term  operations  in  case  of different partitions or remote
+       and put ("p") operations to restore files from trash  directory.	  Note
+       that  such operations move files to and from trash directory, which can
+       be long term operations in  case	 of  different	partitions  or	remote
        drives mounted locally.
 
-       The second scenario uses deletion ("d") operations for moving files  to
+       The  second scenario uses deletion ("d") operations for moving files to
        trash directory and :empty command-line command to purge all previously
        deleted files.
 
-       Deletion and put operations depend on registers,	 which	can  point  to
-       files  in trash directory.  Normally, there are no nonexistent files in
-       registers, but vifm doesn't keep track  of  modifications  under	 trash
-       directory,  so one shouldn't expect value of registers to be absolutely
+       Deletion	 and  put  operations  depend on registers, which can point to
+       files in trash directory.  Normally, there are no nonexistent files  in
+       registers,  but	vifm  doesn't  keep track of modifications under trash
+       directory, so one shouldn't expect value of registers to be  absolutely
        correct if trash directory was modified not by operation that are meant
-       for  it.	 But this won't lead to any issues with operations, since they
+       for it.	But this won't lead to any issues with operations, since  they
        ignore nonexistent files.
 
 Client-Server
-       vifm supports remote execution of command-line  mode  commands,	remote
-       changing	 of  directories  and expression evaluation.  This is possible
+       vifm  supports  remote  execution of command-line mode commands, remote
+       changing of directories and expression evaluation.   This  is  possible
        using --remote and --remote-expr command-line arguments.
 
-       To execute a command remotely combine --remote argument with  -c	 <com-
+       To  execute  a command remotely combine --remote argument with -c <com-
        mand> or +<command>.  For example:
 
 	 vifm --remote -c 'cd /'
 	 vifm --remote '+cd /'
 
-       To  change directory not using command-line mode commands one can spec-
+       To change directory not using command-line mode commands one can	 spec-
        ify paths right after --remote argument, like this:
 
 	 vifm --remote /
 	 vifm --remote ~
 	 vifm --remote /usr/bin /tmp
 
-       Evaluating expression remotely might be	useful	to  query  information
+       Evaluating  expression  remotely	 might	be useful to query information
        about an instance, for example its location:
 
 	 vifm --remote-expr 'expand("%d")'
 
-       If  there  are  several	running instances, the target can be specified
-       with --server-name option (otherwise, the first	one  lexicographically
+       If there are several running instances, the  target  can	 be  specified
+       with  --server-name  option (otherwise, the first one lexicographically
        is used):
 
 	 vifm --server-name work --remote ~/work/project
 
-       List  of	 names	of running instances can be obtained via --server-list
+       List of names of running instances can be  obtained  via	 --server-list
        option.	Name of the current one is available via v:servername.
 
 
        v:servername
-	      server name of the running  vifm	instance.   Empty  if  client-
+	      server  name  of	the  running  vifm instance.  Empty if client-
 	      server feature is disabled.
 
 Plugin
@@ -5514,31 +5820,31 @@ Plugin
 
 	 :EditVifm   select a file or files to open in the current buffer.
 	 :SplitVifm  split buffer and select a file or files to open.
-	 :VsplitVifm  vertically  split	 buffer	 and select a file or files to
+	 :VsplitVifm vertically split buffer and select a  file	 or  files  to
        open.
-	 :DiffVifm   select a file or files to compare	to  the	 current  file
+	 :DiffVifm    select  a	 file  or files to compare to the current file
        with
 		     :vert diffsplit.
 	 :TabVifm    select a file or files to open in tabs.
 
        Each command accepts up to two arguments: left pane directory and right
-       pane directory.	After arguments are checked, vifm process  is  spawned
-       in  a  special "file-picker" mode.  To pick files just open them either
-       by pressing l, i or Enter keys, or by running  :edit  command.	If  no
-       files  are  selected,  file under the cursor is opened, otherwise whole
+       pane  directory.	  After arguments are checked, vifm process is spawned
+       in a special "file-picker" mode.	 To pick files just open  them	either
+       by  pressing  l,	 i  or Enter keys, or by running :edit command.	 If no
+       files are selected, file under the cursor is  opened,  otherwise	 whole
        selection is passed to the plugin and opened in vim.
 
-       The plugin have only  two  settings.   It's  a  string  variable	 named
-       g:vifm_term  to	let  user  specify  command  to	 run GUI terminal.  By
-       default it's equal to 'xterm -e'.  And another  string  variable	 named
-       g:vifm_exec,  which  equals  "vifm"  by	default	 and specifies path to
-       vifm's executable.  To pass arguments  to  vifm	use  g:vifm_exec_args,
+       The  plugin  have  only	two  settings.	 It's  a string variable named
+       g:vifm_term to let user	specify	 command  to  run  GUI	terminal.   By
+       default	it's  equal  to 'xterm -e'.  And another string variable named
+       g:vifm_exec, which equals "vifm"	 by  default  and  specifies  path  to
+       vifm's  executable.   To	 pass  arguments to vifm use g:vifm_exec_args,
        which is empty by default.
 
-       To  use	the  plugin  copy  the vifm.vim file to either the system wide
+       To use the plugin copy the vifm.vim file	 to  either  the  system  wide
        vim/plugin directory or into ~/.vim/plugin.
 
-       If you would prefer not to use the plugin and it is in the system  wide
+       If  you would prefer not to use the plugin and it is in the system wide
        plugin directory add
 
        let loaded_vifm=1
@@ -5558,7 +5864,7 @@ ENVIRONMENT
        MYVIFMRC
 	      Points to main configuration file (usually ~/.vifm/vifmrc).
 
-       These environment variables are valid inside vifm and also can be  used
+       These  environment variables are valid inside vifm and also can be used
        to configure it by setting some of them before running vifm.
 
        When $MYVIFMRC isn't set, it's made as $VIFM/vifmrc (exception for Win-
@@ -5568,11 +5874,11 @@ ENVIRONMENT
        See "Startup" section above for more details.
 
        VIFM_FUSE_FILE
-	      On  execution  of	 external commands this variable is set to the
-	      full path of file used to initiate  FUSE	mount  of  the	closes
-	      mount  point  from current pane directory up.  It's not set when
-	      outside FUSE mount point.	 When vifm  is	used  inside  terminal
-	      multiplexer,  it	tries to set this variable as well (it doesn't
+	      On execution of external commands this variable is  set  to  the
+	      full  path  of  file  used  to initiate FUSE mount of the closes
+	      mount point from current pane directory up.  It's not  set  when
+	      outside  FUSE  mount  point.   When vifm is used inside terminal
+	      multiplexer, it tries to set this variable as well  (it  doesn't
 	      work this way on its own).
 
 SEE ALSO
@@ -5590,4 +5896,4 @@ AUTHOR
 
 
 
-vifm 0.9.1		       February 05, 2018		       VIFM(1)
+vifm 0.10		       November 11, 2018		       VIFM(1)

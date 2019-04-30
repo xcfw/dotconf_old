@@ -16,6 +16,7 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
+--local powerline	= require("powerline")
 --local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
@@ -85,11 +86,16 @@ local themes = {
     "vertex",          -- 10
 }
 
+<<<<<<< HEAD
 local chosen_theme = themes[6]
+=======
+local chosen_theme = themes[2]
+>>>>>>> 923a457dec112d341ee9a7fbaaf0a21a92377ebf
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "urxvtc"
+local terminal     = "xfce4-terminal"
 local editor       = os.getenv("EDITOR") or "vim"
+<<<<<<< HEAD
 local gui_editor   = "atom"
 local browser      = "waterfox"
 local guieditor    = "atom"
@@ -97,6 +103,15 @@ local scrlocker    = "slock"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "Í", "Ø", "Ð", "§" }
+=======
+local gui_editor   = "gvim"
+local browser      = "google-chrome-unstable"
+local guieditor    = "webstorm"
+local scrlocker    = "lightdm-locker"
+
+awful.util.terminal = terminal
+awful.util.tagnames = { "$", "#", "@" }
+>>>>>>> 923a457dec112d341ee9a7fbaaf0a21a92377ebf
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -115,10 +130,10 @@ awful.layout.layouts = {
     --awful.layout.suit.corner.sw,
     --awful.layout.suit.corner.se,
     --lain.layout.cascade,
-    --lain.layout.cascade.tile,
+    lain.layout.cascade.tile,
     --lain.layout.centerwork,
     --lain.layout.centerwork.horizontal,
-    --lain.layout.termfair,
+    lain.layout.termfair,
     --lain.layout.termfair.center,
 }
 
@@ -652,8 +667,13 @@ awful.rules.rules = {
     },
 
     -- Titlebars
+<<<<<<< HEAD
 --    { rule_any = { type = { "dialog", "normal" } },
 --      properties = { titlebars_enabled = true } },
+=======
+    { rule_any = { type = { "dialog", "normal" } },
+      properties = { titlebars_enabled = false } },
+>>>>>>> 923a457dec112d341ee9a7fbaaf0a21a92377ebf
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
@@ -749,3 +769,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
+--
+
+
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+

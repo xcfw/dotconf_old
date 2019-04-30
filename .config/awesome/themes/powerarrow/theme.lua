@@ -78,6 +78,7 @@ theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
 theme.useless_gap                               = 0
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
+theme.widget_clock				= theme.dir .. "/icons/clock.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
 theme.titlebar_ontop_button_normal_active       = theme.dir .. "/icons/titlebar/ontop_normal_active.png"
@@ -99,18 +100,34 @@ theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/
 local markup = lain.util.markup
 local separators = lain.util.separators
 
+-- Textclock
+os.setlocale(os.getenv("LANG")) -- to localize the clock
+local clockicon = wibox.widget.imagebox(theme.widget_clock)
+local mytextclock = wibox.widget.textclock(markup("#7788af", "%A %d %B ") .. markup("#ab7367", ">") .. markup("#de5e1e", " %H:%M "))
+mytextclock.font = "xos4 Terminus 10"
+
+-- Calendar
+theme.cal = lain.widget.cal({
+    attach_to = { mytextclock },
+    notification_preset = {
+        font = "xos4 Terminus 10",
+        fg   = theme.fg_normal,
+        bg   = theme.bg_normal
+    }
+})
+
 -- Binary clock
-local binclock = require("themes.powerarrow.binclock"){
-    height = 16,
-    show_seconds = true,
-    color_active = theme.fg_normal,
-    color_inactive = theme.bg_focus
-}
+--local binclock = require("themes.powerarrow.binclock"){
+--    height = 16,
+--    show_seconds = true,
+--    color_active = theme.fg_normal,
+--    color_inactive = theme.bg_focus
+--}
 
 -- Calendar
 theme.cal = lain.widget.cal({
     --cal = "cal --color=always",
-    attach_to = { binclock.widget },
+    attach_to = { mytextclock.widget },
     notification_preset = {
         font = "xos4 Terminus 10",
         fg   = theme.fg_normal,
@@ -355,7 +372,7 @@ function theme.at_screen_connect(s)
             --pl(wibox.widget { fsicon, theme.fs and theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
             pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
             pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#C0C0A2"),
-            pl(binclock.widget, "#777E76"),
+	    pl(wibox.widget { clockicon, mytextclock.widget layout = wibox.layout.align.horisontal }, "#778E76"),
             --]]
             -- using separators
             arrow(theme.bg_normal, "#343434"),
@@ -377,7 +394,7 @@ function theme.at_screen_connect(s)
             arrow("#8DAA9A", "#C0C0A2"),
             wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#C0C0A2"),
             arrow("#C0C0A2", "#777E76"),
-            wibox.container.background(wibox.container.margin(binclock.widget, 4, 8), "#777E76"),
+            wibox.container.background(wibox.container.margin(mytextclock.widget, 4, 8), "#777E76"),
             arrow("#777E76", "alpha"),
             --]]
             s.mylayoutbox,

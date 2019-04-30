@@ -4,682 +4,713 @@
 'H
 	/home/xcf/
 	..
-1541413836
+1554977759
 'b
 	/home/xcf/bin/
 	..
-1541413836
+1554977907
 'h
 	/home/xcf/
 	..
-1541413836
+1554977907
+'n
+	/home/xcf/.oh-my-zsh/plugins
+	mosh
+1555417614
 
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
 m-1
 l2
-r11,2
+r-11,2
 
 # Left window history (oldest to newest):
-d/home/xcf/Downloads
-	landing-master
+d/home/xcf/src/qmk_firmware/keyboards/dz60/keymaps
+	60_ansi
+1
+d/home/xcf/src/qmk_firmware/keyboards/dz60
+	keymaps
+1
+d/home/xcf/src/qmk_firmware/keyboards
+	dz60
+16
+d/home/xcf/src/qmk_firmware
+	keyboards
+8
+d/home/xcf/src
+	qmk_firmware
+9
+d/home/xcf
+	.WebStorm2019.1
+2
+d/home/xcf/.WebStorm2019.1
+	..
+0
+d/home/xcf
+	.WebStorm2019.1
+2
+d/home/xcf/.WebStorm2019.1
+	config
+1
+d/home/xcf/.WebStorm2019.1/config
+	options
+2
+d/home/xcf/.WebStorm2019.1/config/options
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	jba_config
+1
+d/home/xcf/.WebStorm2019.1/config/jba_config
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	plugins
+3
+d/home/xcf/.WebStorm2019.1/config/plugins
+	Material Theme
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme/lib
+	..
+0
+d/home/xcf/.WebStorm2019.1/config/plugins/Material Theme
+	lib
+1
+d/home/xcf/.WebStorm2019.1/config/plugins
+	Material Theme
+1
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1/config/tasks
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	terminal
 5
+d/home/xcf/.WebStorm2019.1/config/terminal
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1/config/tasks
+	..
+0
+d/home/xcf/.WebStorm2019.1/config
+	tasks
+4
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf/.WebStorm2019.1/system
+	..
+0
+d/home/xcf/.WebStorm2019.1
+	system
+2
+d/home/xcf
+	.cache
+3
+d/home/xcf/.cache
+	..
+0
+d/home/xcf
+	.cache
+3
+d/home/xcf/.cache
+	..
+0
+d/home/xcf
+	.config
+4
+d/home/xcf/.config
+	autostart
+4
+d/home/xcf/.config/autostart
+	jetbrains-toolbox.desktop
+1
+d/home/xcf/.config
+	autostart
+4
+d/home/xcf/.config/autostart
+	jetbrains-toolbox.desktop
+1
+d/home/xcf/.config
+	catfish
+6
+d/home/xcf/.config/catfish
+	..
+0
+d/home/xcf/.config
+	chromium
+7
+d/home/xcf/.config/chromium
+	..
+0
+d/home/xcf/.config
+	clipit
+8
+d/home/xcf/.config/clipit
+	clipitrc
+1
+d/home/xcf/.config
+	lxterminal
+10
+d/home/xcf/.config/lxterminal
+	..
+0
+d/home/xcf/.config
+	lxterminal
+10
+d/home/xcf/.config/lxterminal
+	lxterminal.conf
+1
+d/home/xcf/.config
+	manjaro
+11
+d/home/xcf/.config/manjaro
+	manjaro-settings-manager.conf
+2
+d/home/xcf/.config
+	manjaro
+11
+d/home/xcf/.config/manjaro
+	manjaro-settings-manager-Notifier.conf
+1
+d/home/xcf/.config
+	mc
+12
+d/home/xcf/.config/mc
+	ini
+2
+d/home/xcf/.config
+	transmission
+10
+d/home/xcf/.config/transmission
+	..
+0
+d/home/xcf/.config
+	yay
+12
+d/home/xcf/.config/yay
+	..
+0
+d/home/xcf/.config
+	Kvantum
+1
+d/home/xcf/.config/Kvantum
+	kvantum.kvconfig
+1
+d/home/xcf/.config
+	Kvantum
+1
+d/home/xcf
+	.oh-my-zsh
+10
+d/home/xcf/.oh-my-zsh
+	oh-my-zsh.sh
+15
+d/home/xcf
+	.oh-my-zsh
+10
+d/home/xcf/.oh-my-zsh
+	oh-my-zsh.sh
+15
+d/home/xcf
+	.oh-my-zsh
+10
+d/home/xcf/.oh-my-zsh
+	cache
+2
+d/home/xcf
+	Applications
+5
+d/home/xcf/Applications
+	..
+0
+d/home/xcf
+	Applications
+5
+d/home/xcf/Applications
+	jetbrains-toolbox_00000000000000000000000000000000
+2
+d/home/xcf
+	Desktop
+6
+d/home/xcf/Desktop
+	..
+0
+d/home/xcf
+	Documents
+7
+d/home/xcf/Documents
+	..
+0
 d/home/xcf
 	Downloads
-18
-d/home
-	xcf
-2
-d/
-	usr
-21
-d/usr
-	..
-0
-d/
-	usr
-21
-d/usr
-	share
 8
-d/usr/share
-	lightdm-webkit
-42
-d/usr/share/lightdm-webkit
-	themes
-1
-d/usr/share/lightdm-webkit/themes
-	antergos
-2
-d/usr/share/lightdm-webkit/themes/antergos
-	..
-0
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	js
-4
-d/usr/share/lightdm-webkit/themes/archlinux/js
-	jquery-2.1.4.min.js
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux
-	js
-4
-d/usr/share/lightdm-webkit/themes/archlinux/js
-	jquery-2.1.4.min.js
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	img
-3
-d/usr/share/lightdm-webkit/themes/archlinux/img
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux
-	css
-1
-d/usr/share/lightdm-webkit/themes/archlinux/css
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux
-	README.md
-7
-d/usr/share/lightdm-webkit/themes
-	antergos
-2
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes/antergos/js
-	greeter.js
-1
-d/usr/share/lightdm-webkit/themes/antergos
-	img
-4
-d/usr/share/lightdm-webkit/themes/antergos/img
-	..
-0
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes/antergos/js
-	greeter.js
-1
-d/usr/share/lightdm-webkit/themes/antergos
-	js
-5
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	..
-0
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes
-	archlinux
-3
-d/usr/share/lightdm-webkit/themes/archlinux
-	wallpapers
-5
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers/antergos-wallpapers-0.7
-	white_line_by_snipes2.jpg
-21
-d/usr/share/lightdm-webkit/themes/archlinux/wallpapers
-	antergos-wallpapers-0.7
-1
-d/home/xcf/src
-	alemgl
-1
-d/home/xcf/src/alemgl
-	log
-3
 d/home/xcf/Downloads
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
+	Music
+9
+d/home/xcf/Music
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
+	Pictures
+10
+d/home/xcf/Pictures
 	..
 0
 d/home/xcf
-	rtorrent
-28
-d/home/xcf/rtorrent
-	..
-0
-d/home/xcf
-	src
-19
-d/home/xcf/src
-	FrontDreamLead-develop
-1
-d/home/xcf/src/FrontDreamLead-develop
-	dist
-1
-d/home/xcf/src/FrontDreamLead-develop/dist
-	..
-0
-d/home/xcf/src/FrontDreamLead-develop
-	e2e
-2
-d/home/xcf/src/FrontDreamLead-develop/e2e
-	..
-0
-d/home/xcf/src/FrontDreamLead-develop
-	src
-3
-d/home/xcf/src/FrontDreamLead-develop/src
-	..
-0
-d/home/xcf/src/FrontDreamLead-develop
-	src
-2
-d/home/xcf/src
-	FrontDreamLead
-1
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src/FrontDreamLead/node_modules
-	@angular
-2
-d/home/xcf/src/FrontDreamLead/node_modules/@angular
-	..
-0
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-19
-d/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
-	..
-0
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-18
-d/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
-	themes
-1
-d/home/xcf/src/FrontDreamLead/node_modules
-	angular2-multiselect-dropdown
-18
-d/home/xcf/src/FrontDreamLead
-	.git
-1
-d/home/xcf/src/FrontDreamLead/.git
-	branches
-1
-d/home/xcf/src/FrontDreamLead/.git/branches
-	..
-0
-d/home/xcf/src/FrontDreamLead/.git
-	hooks
-2
-d/home/xcf/src/FrontDreamLead/.git/hooks
-	..
-0
-d/home/xcf/src/FrontDreamLead/.git
-	hooks
-2
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src/FrontDreamLead/node_modules
-	ng2share
-42
-d/home/xcf/src/FrontDreamLead
-	package.json
+	Public
 11
-d/home/xcf/src
-	FrontDreamLead
-1
-d/home/xcf/src/FrontDreamLead
-	src
-4
-d/home/xcf/src/FrontDreamLead/src
-	app
-1
-d/home/xcf/src/FrontDreamLead/src/app
-	app.component.ts
-17
-d/home/xcf/src/FrontDreamLead/src
-	favicon.png
-5
-d/home/xcf/src/FrontDreamLead
-	node_modules
-3
-d/home/xcf/src
-	FrontDreamLead
-1
+d/home/xcf/Public
+	..
+0
+d/home/xcf
+	Templates
+12
+d/home/xcf/Templates
+	..
+0
+d/home/xcf
+	Videos
+13
+d/home/xcf/Videos
+	..
+0
+d/home/xcf
+	anaconda3
+14
+d/home/xcf/anaconda3
+	..
+0
+d/home/xcf
+	data
+15
+d/home/xcf/data
+	..
+0
+d/home/xcf
+	qmk_firmware
+16
+d/home/xcf/qmk_firmware
+	..
+0
 d/home/xcf
 	src
-19
+16
 d/home/xcf/src
-	stm-frontend
-10
-d/home/xcf/src/stm-frontend
-	src
-4
-d/home/xcf/src/stm-frontend/src
-	router
-3
-d/home/xcf/src/stm-frontend/src/router
-	index.js
-1
-d/home/xcf/src/stm-frontend/src
-	components
-2
-d/home/xcf/src/stm-frontend/src/components
-	LineChart.js
-5
-d/home/xcf/src/stm-frontend/src
-	components
-2
-d/home/xcf/src/stm-frontend
-	src
-4
-d/home/xcf/src
-	stm-frontend
-10
+	qmk_firmware
+9
 d/home/xcf
-	src
-19
+	win
+16
+d/home/xcf/win
+	..
+0
+d/home/xcf
+	.WebStorm2019.1
+2
+d/home
+	xcf
+1
+d/home/xcf
+	.WebStorm2019.1
+2
 d
 
 # Right window history (oldest to newest):
-D/home/xcf/src/yay
+D/mnt/win/Users/admin/Documents/MEGAsync/stm
+	Рейтинг регионов   Все проблемы.xcf
+6
+D/mnt/win/Users/admin/Documents/MEGAsync
 	..
 0
-D/home/xcf/src
-	yay
+D/mnt/win/Users/admin/Documents
+	MEGAsync
 2
-D/home/xcf
+D/mnt/win/Users/admin
 	Downloads
-9
-D/home/xcf/Downloads
+21
+D/mnt/win/Users/admin/Downloads
 	..
 0
-D/home/xcf
-	.local
-3
-D/home/xcf/.local
+D/mnt/win/Users/admin
+	Music
+25
+D/mnt/win/Users/admin/Music
 	..
 0
-D/home/xcf
-	.vim
-8
-D/home/xcf/.vim
+D/mnt/win/Users/admin
+	Saved Games
+28
+D/mnt/win/Users/admin/Saved Games
 	..
 0
-D/home/xcf
-	.vim
-8
-D/home
-	xcf
+D/mnt/win/Users/admin
+	Pictures
+25
+D/mnt/win/Users
+	All Users
+1
+D/mnt/win
+	Users
+11
+D/mnt
+	win
 2
 D/
 	usr
-20
+19
 D/usr
 	share
 8
 D/usr/share
+	powerline
+40
+D/usr/share/powerline
+	bindings
+1
+D/usr/share/powerline/bindings
 	..
 0
+D/usr/share/powerline
+	bindings
+1
+D/usr/share
+	powerline
+40
 D/usr
-	local
-6
-D/usr/local
-	etc
-2
-D/usr/local/etc
-	..
-0
-D/usr/local
-	share
-8
-D/usr/local/share
-	man
-1
-D/usr/local/share/man
-	..
-0
-D/usr/local/share
-	man
-1
-D/usr/local
-	src
-9
-D/usr/local/src
-	..
-0
-D/usr/local
-	sbin
-7
-D/usr/local/sbin
-	..
-0
-D/usr/local
-	man
-6
-D/usr/local/man
-	..
-0
-D/usr/local
-	lib
-5
-D/usr/local/lib
-	..
-0
-D/usr/local
-	include
-4
-D/usr/local/include
-	..
-0
-D/usr/local
-	games
-3
-D/usr/local/games
-	..
-0
-D/usr/local
-	etc
-2
-D/usr/local/etc
-	..
-0
-D/usr/local
 	bin
 1
-D/usr/local/bin
-	..
-0
-D/usr/local
-	bin
-1
-D/usr/local/bin
-	protonvpn-cli
-1
-D/usr/local
-	bin
-1
+D/usr/bin
+	powerline
+35
 D/usr
-	local
-6
+	bin
+1
 D/
-	var
-21
-D/var
+	usr
+19
+D/usr
+	lib
+3
+D/usr/lib
+	python3.7
+40
+D/usr/lib/python3.7
+	site-packages
+24
+D/usr/lib/python3.7/site-packages
+	powerline_status-2.7-py3.7.egg-info
+37
+D/usr/lib/python3.7/site-packages/powerline_status-2.7-py3.7.egg-info
+	requires.txt
+5
+D/usr/lib/python3.7/site-packages
+	powerline
+36
+D/usr/lib/python3.7/site-packages/powerline
+	lint
+7
+D/usr/lib/python3.7/site-packages/powerline/lint
 	..
 0
+D/usr/lib/python3.7/site-packages/powerline
+	dist
+5
+D/usr/lib/python3.7/site-packages/powerline/dist
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline
+	dist
+5
+D/usr/lib/python3.7/site-packages/powerline/dist
+	systemd
+1
+D/usr/lib/python3.7/site-packages/powerline/dist/systemd
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline/dist
+	systemd
+1
+D/usr/lib/python3.7/site-packages/powerline
+	lib
+6
+D/usr/lib/python3.7/site-packages/powerline/lib
+	..
+0
+D/usr/lib/python3.7/site-packages/powerline
+	lib
+6
+D/usr/lib/python3.7/site-packages/powerline/lib
+	debug.py
+6
+D/usr/lib/python3.7/site-packages/powerline
+	__init__.py
+13
+D/usr/lib/python3.7/site-packages
+	powerline
+16
+D/usr/lib/python3.7
+	site-packages
+16
+D/usr/lib
+	python3.7
+16
+D/usr
+	lib
+4
 D/
 	home
-8
+4
 D/home
 	xcf
+1
+D/home/xcf
+	src
+16
+D/home/xcf/src
+	qmk
+8
+D/home/xcf/src/qmk
+	..
+0
+D/home/xcf/src
+	qmk
+8
+D/home/xcf/src/qmk
+	qmkile (1).hex
+1
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf/src/qmk_firmware
+	util
+12
+D/home/xcf/src/qmk_firmware/util
+	linux_install.sh
+19
+D/home/xcf/src/qmk_firmware
+	util
+12
+D/home/xcf/src/qmk_firmware/util
+	..
+0
+D/home/xcf/src/qmk_firmware
+	layouts
+7
+D/home/xcf/src/qmk_firmware/layouts
+	default
 2
+D/home/xcf/src/qmk_firmware/layouts/default
+	..
+0
+D/home/xcf/src/qmk_firmware/layouts
+	default
+2
+D/home/xcf/src/qmk_firmware
+	quantum
+9
+D/home/xcf/src/qmk_firmware/quantum
+	..
+0
+D/home/xcf/src/qmk_firmware
+	users
+12
+D/home/xcf/src/qmk_firmware/users
+	333fred
+1
+D/home/xcf/src/qmk_firmware
+	util
+13
+D/home/xcf/src/qmk_firmware/util
+	usb_detach
+1
+D/home/xcf/src/qmk_firmware/util/usb_detach
+	..
+0
+D/home/xcf/src/qmk_firmware/util
+	usb_detach
+1
+D/home/xcf/src/qmk_firmware
+	show_options.mk
+43
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf/src/qmk_firmware
+	show_options.mk
+43
+D/home/xcf/src
+	qmk_firmware
+9
+D/home/xcf
+	src
+16
+D/home
+	xcf
+1
+D/home/xcf
+	Downloads
+8
+D/home/xcf/Downloads
+	jetbrains-toolbox-1.14.5037
+3
+D/home/xcf/Downloads/jetbrains-toolbox-1.14.5037
+	..
+0
+D/home/xcf/Downloads
+	qmkilek9.json
+13
+D/home/xcf
+	Downloads
+3
+D/home
+	xcf
+1
 D/home/xcf
 	.config
-2
+4
 D/home/xcf/.config
-	pulse
-6
-D/home/xcf
-	Downloads
-11
-D/home/xcf/Downloads
-	landing-master
-1
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads/landing-master/landing-master
-	..
-0
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads
-	landing-master
-3
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads/landing-master/landing-master
-	..
-0
-D/home/xcf/Downloads/landing-master
-	landing-master
-1
-D/home/xcf/Downloads
-	landing-master
-3
-D/home/xcf
-	src
-16
-D/home
-	xcf
-2
-D/home/xcf
-	data
-17
-D/home/xcf/data
-	win
+	awesome
+9
+D/home/xcf/.config/awesome
+	rc.lua
 4
+D/home/xcf/.config
+	awesome
+9
 D/home/xcf
 	src
-16
-D/home/xcf/src
-	landing
-3
-D/home/xcf/src/landing
-	wp-config.php
-12
-D/home/xcf/src
-	landing
-4
-D/home/xcf
-	src
-19
-D/home/xcf/src
-	alemgl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src
-	alemgl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	startbootstrap-coming-soon
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	img
 2
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon/img
-	bg-mobile-fallback.jpg
-1
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	js
-3
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon/js
-	..
-0
-D/home/xcf/src/alemgl/blackrockdigital.github.io/startbootstrap-coming-soon
-	vendor
-5
-D/home/xcf/src/alemgl/blackrockdigital.github.io
-	alem.gl
-1
-D/home/xcf/src/alemgl
-	blackrockdigital.github.io
-1
 D/home/xcf/src
-	alemgl
-1
-D/home/xcf
-	Downloads
-16
-D/home/xcf/Downloads
-	tsetup.1.3.12.alpha
+	dotconf
+2
+D/home/xcf/src/dotconf
+	.config
+2
+D/home/xcf/src/dotconf/.config
+	mc
 7
-D/home/xcf/Downloads/tsetup.1.3.12.alpha
-	Telegreat
-1
-D/home/xcf/Downloads/tsetup.1.3.12.alpha/Telegreat
+D/home/xcf/src/dotconf/.config/mc
 	..
 0
-D/home/xcf/Downloads/tsetup.1.3.12.alpha
-	Telegreat
-1
-D/home/xcf/Downloads
+D/home/xcf/src/dotconf/.config
+	config.h
+11
+D/home/xcf/src/dotconf
+	.oh-my-zsh
+7
+D/home/xcf/src/dotconf/.oh-my-zsh
 	..
 0
-D/home/xcf
-	Downloads
-16
-D/home/xcf/Downloads
-	photo_2016-12-02_02-29-37.jpg
-42
-D/home/xcf
-	Downloads
-16
-D/home
-	xcf
-2
-D/home/xcf
-	src
-13
-D/home/xcf/src
-	bkp
-2
-D/home/xcf/src/bkp
-	xdgautostart
-2
-D/home/xcf/src/bkp/xdgautostart
-	org.gnome.SettingsDaemon.A11ySettings.desktop
+D/home/xcf/src/dotconf
+	.oh-my-zsh
 1
-D/home/xcf/src/bkp
-	xdgautostart
-2
-D/home/xcf/src
-	bkp
-10
+D/home/xcf/src/dotconf/.oh-my-zsh
+	log
+1
+D/home/xcf/src/dotconf
+	.vim
+4
+D/home/xcf/src/dotconf/.vim
+	..
+0
+D/home/xcf/src/dotconf
+	.zshrc
+5
 D
 
 # Command line history (oldest to newest):
-:q
-:!sudo vim 20-nvidia.conf
-:!sudo vim 40-libinput.conf
-:^t
-:!cat wp-config.php
-:!id
-:mkdir .mpdscribble
-:yank path
-:yank
-:chromium
-:cd /home/xcf/src/
-:sort date
+:mkdir .st
+:touch config.h
+:w
+:!python __init__.py
+:!python config.py
+:!tar xvzf WebStorm-2019.1.tar.gz
+:!tar xvzf pycharm-professional-2019.1.1.tar.gz
+:!chown -R xcf:xcf .
+:!sudo chown -R xcf:xcf .
+:mkdir conf.d
+:!sudo chown -R xcf:xcf qmk/
+:!tar xvzf qmk_toolbox-0.0.8.tar.gz ../src/qmk/
+:!tar xvzf qmk_toolbox-0.0.8.tar.gz
+:!tar xvzf qmk_toolbox-0.0.9.tar.gz
+:./qmk-toolbox
 :sort
-:edit
+:mkdir .oh-my-zsh
 
 # Search history (oldest to newest):
-/t
-/tele
-/usr
-/ligh
-/solid
-/mul
-/ng2
+/pow
+/.vim
+/zsh
+/conf
+/st
+/stt
+/npm
+/yay
+/python
+/pacman
+/pacm
+/pac
+/git
+/powe
+/sh
+/pyth
+/power
+/.zshr
+/src
 
 # Prompt history (oldest to newest):
-p.Xauthority
-p.Xdefaults
-p.angular-cli.json
-pnode_modules2
+p.config.h
+pconfig.h
+ppowerline.plugin.zsh
+ppowerline3231
+ppowerline
+pconf.d
+p10-powerline-symbols.conf
+pqmkile3.hex
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/xcf/.local/share/vifm/Trash/000_angular2-multiselect-dropdown
+""/home/xcf/.zshrc
 
 # Directory stack (oldest to newest):
 
 # Trash content:
-t/home/xcf/.local/share/vifm/Trash/000_~
-	/home/xcf/rtorrent/~
-t/home/xcf/.local/share/vifm/Trash/000_.rtorrent.rc
-	/home/xcf/rtorrent/.rtorrent.rc
-t/home/xcf/.local/share/vifm/Trash/000_dist
-	/home/xcf/src/FrontDreamLead-develop/dist
-t/home/xcf/.local/share/vifm/Trash/000_node_modules
-	/home/xcf/src/bkp/node_modules
-t/home/xcf/.local/share/vifm/Trash/000_angular2-multiselect-dropdown
-	/home/xcf/src/FrontDreamLead/node_modules/angular2-multiselect-dropdown
+t/home/xcf/.local/share/vifm/Trash/000_awesome
+	/home/xcf/.config/awesome
+t/home/xcf/.local/share/vifm/Trash/000_clipit
+	/home/xcf/.config/clipit
+t/home/xcf/.local/share/vifm/Trash/000_typescript-vim
+	/home/xcf/.vim/bundle/typescript-vim
+t/home/xcf/.local/share/vifm/Trash/000_.vim
+	/home/xcf/.vim
+t/home/xcf/.local/share/vifm/Trash/000_.vim_runtime
+	/home/xcf/.vim_runtime
+t/home/xcf/.local/share/vifm/Trash/000_.vimrc
+	/home/xcf/.vimrc
+t/home/xcf/.local/share/vifm/Trash/000_.Xkbmap
+	/home/xcf/.Xkbmap
+t/home/xcf/.local/share/vifm/Trash/000_powerline
+	/home/xcf/.oh-my-zsh/custom/plugins/powerline
+t/home/xcf/.local/share/vifm/Trash/000_powerline.zsh
+	/home/xcf/.oh-my-zsh/custom/plugins/powerline.zsh
 
 # State:
 f

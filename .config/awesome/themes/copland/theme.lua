@@ -5,6 +5,9 @@
 
 --]]
 
+-- package.path = package.path .. ";/usr/lib/python3.7/site-packages/powerline/bindings/awesome/powerline.lua"
+-- require("powerline")
+-- 
 local gears = require("gears")
 local lain  = require("lain")
 local awful = require("awful")
@@ -25,7 +28,7 @@ theme.fg_urgent                                 = "#000000"
 theme.bg_urgent                                 = "#FFFFFF"
 theme.border_width                              = 1
 theme.border_normal                             = "#141414"
-theme.border_focus                              = "#93B6FF"
+theme.border_focus                              = "#645CE6"
 theme.taglist_fg_focus                          = "#FFFFFF"
 theme.taglist_bg_focus                          = "#111111"
 theme.taglist_bg_normal                         = "#111111"
@@ -357,13 +360,14 @@ function theme.at_screen_connect(s)
             baticon,
             batwidget,
             bar_spr,
-            --fsicon,
-            --fswidget,
+            fsicon,
+            fswidget,
             bar_spr,
             volicon,
             volumewidget,
             bar_spr,
             mytextclock,
+	    --powerline_widget,
         },
     }
 end
