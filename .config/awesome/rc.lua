@@ -61,7 +61,7 @@ run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
 -- This function implements the XDG autostart specification
 --[[
 awful.spawn.with_shell(
-    'if (xrdb -query | grep --quiet "^awesome\\.started:\\s*true$"); then; exit; fi;' ..
+    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
     'xrdb -merge <<< "awesome.started:true";' ..
     -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
     'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
@@ -85,18 +85,18 @@ local themes = {
     "vertex",          -- 10
 }
 
-local chosen_theme = themes[5]
+local chosen_theme = themes[6]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "urxvtc"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "gvim"
-local browser      = "chromium"
+local gui_editor   = "atom"
+local browser      = "waterfox"
 local guieditor    = "atom"
-local scrlocker    = "lightdm-locker"
+local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "Í", "Ø", "Ð", "§" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -207,6 +207,9 @@ awful.util.mymainmenu = freedesktop.menu.build({
         -- other triads can be put here
     }
 })
+-- hide menu when mouse leaves it
+--awful.util.mymainmenu.wibox:connect_signal("mouse::leave", function() awful.util.mymainmenu:hide() end)
+
 --menubar.utils.terminal = terminal -- Set the Menubar terminal for applications that require it
 -- }}}
 
@@ -649,8 +652,8 @@ awful.rules.rules = {
     },
 
     -- Titlebars
-    { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = true } },
+--    { rule_any = { type = { "dialog", "normal" } },
+--      properties = { titlebars_enabled = true } },
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
@@ -742,4 +745,7 @@ end
 client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("focus", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- possible workaround for tag preservation when switching back to default screen:
+-- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}

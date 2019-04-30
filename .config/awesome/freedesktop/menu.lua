@@ -116,6 +116,9 @@ function menu.build(args)
         end
     end
 
+    -- Hold the menu in the module
+    menu.menu = _menu
+
     return _menu
 end
 
